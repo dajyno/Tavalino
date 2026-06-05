@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tavalino Energy Partners with Chinese Firm — News</title>
+<meta name="description" content="Tavalino Energy signs a landmark partnership agreement with a leading Chinese manufacturer to produce high-quality solar components.">
+<link rel="icon" href="../images/favicon.png" type="image/png" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Satoshi','Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#f4f7f6;color:#1a2e2a;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden
+}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:100px 0}
+h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#0a1a1f}
+
+/* Preloader */
+.preloader{
+  position:fixed;inset:0;z-index:99999;
+  background:#0a1a1f;display:flex;
+  align-items:center;justify-content:center;
+  transition:opacity 0.6s ease,visibility 0.6s ease
+}
+.preloader.hidden{opacity:0;visibility:hidden}
+.preloader-spinner{
+  width:48px;height:48px;
+  border:3px solid rgba(0,182,122,0.15);
+  border-top-color:#00b67a;border-radius:50%;
+  animation:spin 0.8s linear infinite
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.preloader-label{
+  position:absolute;margin-top:80px;
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:13px;font-weight:600;letter-spacing:3px;
+  color:#00b67a;text-transform:uppercase
+}
+
+/* Top Bar */
+.top-bar{
+  background:#0a1a1f;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)
+}
+.top-bar .container{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px
+}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.top-bar-item{
+  display:flex;align-items:center;gap:7px;
+  font-size:12px;color:#8aa39b;transition:color 0.2s
+}
+.top-bar-item i{font-size:12px;color:#00b67a;width:14px}
+.top-bar-item:hover{color:#e0ece7}
+.top-bar-social{display:flex;gap:10px}
+.top-bar-social a{
+  width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+  border-radius:6px;color:#6a8e84;font-size:12px;
+  transition:all 0.25s ease;background:rgba(255,255,255,0.03)
+}
+.top-bar-social a:hover{background:#00b67a;color:#fff;transform:translateY(-2px)}
+
+/* Header */
+.header{
+  position:sticky;top:0;width:100%;z-index:1000;
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  background:#fff;border-bottom:1px solid rgba(0,0,0,0.05)
+}
+.header.scrolled{
+  background:rgba(0,70,56,0.92);
+  backdrop-filter:blur(24px) saturate(1.3);-webkit-backdrop-filter:blur(24px) saturate(1.3);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 4px 30px rgba(0,0,0,0.12)
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;gap:24px
+}
+.header-logo{display:flex;align-items:center;gap:10px}
+.header-logo img{height:44px;transition:all 0.3s ease}
+.header-logo span{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-weight:900;font-size:18px;letter-spacing:2px;
+  color:#fff;transition:color 0.2s
+}
+.header-logo span em{font-style:normal;color:#00b67a}
+.header-nav{display:flex;align-items:center;gap:8px}
+.header-nav a{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:13px;font-weight:500;letter-spacing:0.3px;
+  color:#3a5a52;padding:8px 16px;border-radius:6px;
+  transition:all 0.25s ease;position:relative
+}
+.header-nav a:hover,.header-nav a.active{color:#004638;background:rgba(0,70,56,0.06)}
+.header.scrolled .header-nav a{color:#b0c8c0}
+.header.scrolled .header-nav a:hover,.header.scrolled .header-nav a.active{color:#fff;background:rgba(255,255,255,0.05)}
+.header-nav .nav-cta{
+  background:#004638;color:#fff;font-weight:700;padding:10px 24px;
+  border-radius:6px;margin-left:8px
+}
+.header-nav .nav-cta:hover{background:#005c48;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,70,56,0.3)}
+.menu-toggle{display:none;background:none;border:none;font-size:22px;color:#0a1a1f;cursor:pointer;padding:8px;border-radius:6px;transition:background 0.2s}
+.menu-toggle:hover{background:rgba(0,0,0,0.04)}
+.header.scrolled .menu-toggle{color:#fff}
+.header.scrolled .menu-toggle:hover{background:rgba(255,255,255,0.06)}
+
+/* Article Hero */
+.article-hero{
+  position:relative;min-height:320px;display:flex;align-items:flex-end;
+  background:linear-gradient(135deg,#0a1a1f 0%,#0d2a2a 50%,#004638 100%);
+  overflow:hidden;margin-top:-1px
+}
+.article-hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('../images/projects/real-2.jpg');
+  background-size:cover;background-position:center;
+  opacity:0.12;mix-blend-mode:overlay
+}
+.article-hero .container{position:relative;z-index:2;width:100%;padding:140px 24px 60px}
+.article-hero .article-meta{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px
+}
+.article-hero .article-cat{
+  font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;
+  color:#00b67a;background:rgba(0,182,122,0.12);padding:4px 12px;border-radius:4px
+}
+.article-hero .article-date{
+  font-size:12px;color:#8aa39b
+}
+.article-hero h1{
+  font-size:clamp(26px,3.5vw,40px);color:#fff;max-width:800px
+}
+
+/* Article Body */
+.article-body{padding:0 0 80px}
+.article-featured-img{
+  width:100%;max-height:500px;object-fit:cover;
+  border-radius:0 0 14px 14px;margin-bottom:48px
+}
+.article-content{
+  max-width:700px;margin:0 auto;
+  font-size:16px;color:#3a5a52;line-height:1.85
+}
+.article-content p{margin-bottom:20px}
+.article-content h2{
+  font-size:24px;margin:40px 0 16px;color:#0a1a1f
+}
+.article-content h3{
+  font-size:18px;margin:32px 0 12px;color:#0a1a1f
+}
+.article-content ul{margin:0 0 20px;padding-left:24px}
+.article-content ul li{
+  list-style:disc;margin-bottom:8px;font-size:15px
+}
+.article-content blockquote{
+  border-left:3px solid #00b67a;
+  background:#f0f5f3;padding:24px 28px;
+  margin:32px 0;border-radius:0 8px 8px 0;
+  font-style:italic;color:#1a2e2a;font-size:17px
+}
+.article-content .inline-img{
+  margin:32px 0;border-radius:10px;overflow:hidden
+}
+.article-content .inline-img img{width:100%;border-radius:10px}
+.article-content .inline-img .caption{
+  font-size:13px;color:#6a8e84;text-align:center;
+  margin-top:8px;font-style:italic
+}
+
+/* Share Bar */
+.share-bar{
+  max-width:700px;margin:48px auto 0;
+  padding:24px 0;border-top:1px solid #e0ece7;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px
+}
+.share-bar span{
+  font-size:13px;font-weight:600;color:#0a1a1f;
+  text-transform:uppercase;letter-spacing:1px
+}
+.share-bar .share-links{display:flex;gap:8px}
+.share-bar .share-links a{
+  width:38px;height:38px;display:flex;align-items:center;justify-content:center;
+  border:1px solid #e0ece7;border-radius:8px;
+  color:#5a7a72;font-size:14px;
+  transition:all 0.25s ease
+}
+.share-bar .share-links a:hover{background:#004638;border-color:#004638;color:#fff;transform:translateY(-2px)}
+
+/* Related */
+.related-section{background:#fff;padding:80px 0;border-top:1px solid #e0ece7}
+.related-section h3{
+  text-align:center;font-size:28px;margin-bottom:40px
+}
+.related-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px
+}
+.related-card{
+  background:#f4f7f6;border-radius:12px;overflow:hidden;
+  border:1px solid #e0ece7;transition:all 0.35s ease
+}
+.related-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,70,56,0.06)}
+.related-card img{width:100%;height:180px;object-fit:cover}
+.related-card .body{padding:20px 20px 24px}
+.related-card .body .rc-date{font-size:11px;color:#6a8e84;margin-bottom:6px}
+.related-card .body h5{font-size:15px;margin-bottom:8px;line-height:1.3}
+.related-card .body p{font-size:13px;color:#5a7a72;line-height:1.6;margin-bottom:12px}
+.related-card .body a{
+  font-size:12px;font-weight:700;color:#004638;
+  display:inline-flex;align-items:center;gap:6px;
+  transition:gap 0.25s ease
+}
+.related-card .body a:hover{gap:10px;color:#00b67a}
+
+/* Footer */
+.footer{padding:80px 0 0;background:#0a1a1f}
+.footer-grid{display:grid;grid-template-columns:2fr 3fr;gap:48px}
+.footer-brand img{height:40px;margin-bottom:16px}
+.footer-brand p{font-size:14px;color:#6a8e84;line-height:1.7;margin-bottom:20px;max-width:340px}
+.footer-social{display:flex;gap:8px}
+.footer-social a{
+  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,0.08);border-radius:8px;
+  color:#6a8e84;font-size:13px;transition:all 0.25s ease
+}
+.footer-social a:hover{border-color:#00b67a;color:#fff;background:rgba(0,182,122,0.1);transform:translateY(-3px)}
+.footer-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-content:start}
+.footer-contact-block h5{
+  font-family:'Space Grotesk','Inter',sans-serif;font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;color:#e0ece7;margin-bottom:16px
+}
+.footer-contact-block p{font-size:13px;color:#6a8e84;line-height:1.8;margin:0}
+.footer-contact-block a{font-size:13px;color:#6a8e84;display:block;line-height:1.8;transition:color 0.2s}
+.footer-contact-block a:hover{color:#00b67a}
+.footer-contact-block .icon{color:#00b67a;margin-right:8px;width:16px;display:inline-block}
+.footer-bottom{
+  margin-top:56px;padding:24px 0;
+  border-top:1px solid rgba(255,255,255,0.04);
+  text-align:center
+}
+.footer-bottom p{font-size:12px;color:#4a6e64;margin:0}
+.footer-bottom a{color:#00b67a;font-weight:700;transition:color 0.2s}
+.footer-bottom a:hover{color:#f8c51c}
+
+/* WhatsApp Float */
+.wa-float{
+  position:fixed;bottom:28px;right:28px;z-index:9999;
+  width:54px;height:54px;
+  background:#00b67a;color:#fff;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:26px;text-decoration:none;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1);
+  box-shadow:0 6px 24px rgba(0,182,122,0.3)
+}
+.wa-float:hover{background:#009e6a;transform:translateY(-4px) scale(1.05);box-shadow:0 12px 40px rgba(0,182,122,0.4);color:#fff}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(30px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* Responsive */
+@media(max-width:1024px){
+  .related-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .article-hero{min-height:260px}
+  .article-hero .container{padding:110px 24px 40px}
+  .section,.related-section{padding:60px 0}
+  .article-content{font-size:15px}
+  .related-grid{grid-template-columns:1fr}
+  .header-nav{
+    position:fixed;top:0;right:-100%;width:300px;height:100vh;
+    background:rgba(10,26,31,0.98);backdrop-filter:blur(24px);
+    flex-direction:column;padding:80px 32px 32px;gap:4px;
+    transition:right 0.4s cubic-bezier(0.16,1,0.3,1);
+    z-index:99;border-left:1px solid rgba(255,255,255,0.04)
+  }
+  .header-nav.open{right:0}
+  .header-nav a{padding:14px 20px;font-size:15px;color:#d0e2db}
+  .header-nav a:hover,.header-nav a.active{color:#fff;background:rgba(255,255,255,0.06)}
+  .header-nav .nav-cta{margin-left:0;margin-top:8px;text-align:center}
+  .menu-toggle{display:block;z-index:100}
+  .menu-toggle.open{position:fixed;top:24px;right:24px;color:#00b67a}
+  .footer-grid{grid-template-columns:1fr;gap:40px}
+  .footer-contact-grid{grid-template-columns:1fr;gap:24px}
+  .top-bar .container{justify-content:center}
+  .top-bar-left,.top-bar-right{justify-content:center}
+}
+@media(max-width:768px){
+  .article-content{padding:0 24px}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .article-content{padding:0 16px}
+  .article-hero h1{font-size:22px}
+  .share-bar{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-spinner"></div>
+  <div class="preloader-label">Tavalino</div>
+</div>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:info@tavalinoenergy.com" class="top-bar-item">
+        <i class="fa-regular fa-envelope"></i> info@tavalinoenergy.com
+      </a>
+      <a href="tel:+2348033119180" class="top-bar-item">
+        <i class="fa-solid fa-phone"></i> +234 803 311 9180
+      </a>
+      <span class="top-bar-item">
+        <i class="fa-regular fa-clock"></i> Mon–Fri, 8:00am – 5:00pm
+      </span>
+    </div>
+    <div class="top-bar-right">
+      <div class="top-bar-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="../index.html" class="header-logo">
+        <img src="../images/footer-logo.png" alt="Tavalino Energy" id="headerLogo">
+      </a>
+      <nav class="header-nav" id="headerNav">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="../services.html">Services</a>
+        <a href="../solutions.html">Solutions</a>
+        <a href="../projects.html">Projects</a>
+        <a href="../news.html" class="active">News</a>
+        <a href="../contact.html" class="nav-cta">Get a Quote</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Article Hero -->
+<section class="article-hero">
+  <div class="container">
+    <div class="article-meta">
+      <span class="article-cat">Company News</span>
+      <span class="article-date"><i class="fa-regular fa-calendar" style="margin-right:4px"></i>February 2026</span>
+    </div>
+    <h1>Tavalino Energy Signs Partnership Agreement with Chinese Firm to Manufacture Top Notch Solar Components</h1>
+  </div>
+</section>
+
+<!-- Featured Image -->
+<img src="../images/news/china header.svg" alt="Partnership signing ceremony" class="article-featured-img">
+
+<!-- Article Body -->
+<div class="article-body section">
+  <div class="article-content">
+
+    <p><strong>Changzhou, China</strong> — Tavalino Energy Services has signed a strategic partnership agreement with a leading Chinese solar component manufacturer to produce high-quality solar panels, inverters, and battery systems tailored to the Nigerian and West African markets.</p>
+
+    <p>The agreement, finalized in February 2026, establishes a joint manufacturing and technology transfer framework that will see Tavalino Energy source advanced photovoltaic cells, inverter electronics, and energy storage components directly from its Chinese partner, with local assembly and quality assurance managed from Tavalino's facility in Port Harcourt.</p>
+
+    <h2>What the Partnership Means</h2>
+
+    <p>This partnership marks a significant step in Tavalino Energy's mission to deliver world-class solar solutions at competitive prices. By eliminating intermediary supply chains and leveraging the manufacturing expertise of one of China's top renewable energy component makers, Tavalino can offer:</p>
+
+    <ul>
+      <li>High-efficiency solar panels with improved durability for tropical climates</li>
+      <li>Next-generation hybrid inverters with smart load management</li>
+      <li>Lithium iron phosphate batteries with enhanced cycle life</li>
+      <li>Full warranty coverage and local technical support</li>
+    </ul>
+
+    <blockquote>
+      "This partnership allows us to bring genuine, high-quality solar components directly to our customers at factory-competitive prices. We are not just distributing — we are building the supply chain for Nigeria's renewable energy future."
+      <br><br>
+      <strong>— Tavalino Energy Management</strong>
+    </blockquote>
+
+    <div class="inline-img">
+      <img src="../images/news/china inline.svg" alt="Solar component manufacturing facility">
+      <div class="caption">The partnership includes technology transfer and quality assurance protocols aligned with international standards.</div>
+    </div>
+
+    <h2>Impact on Local Content</h2>
+
+    <p>The agreement also includes a capacity-building component, with Tavalino engineers receiving hands-on training in quality control, system design, and after-sales service. This ensures that every component delivered meets the specific requirements of Nigeria's power landscape — from voltage fluctuations to high ambient temperatures.</p>
+
+    <div class="inline-img">
+      <img src="../images/news/china inline 2.svg" alt="Engineering training">
+      <div class="caption">Ongoing inspection and quality control</div>
+    </div>
+
+    <p>Customers can expect to see the first batch of locally assembled components under this partnership available in Q2 2026, starting with residential solar kits and expanding to commercial and industrial systems by Q3.</p>
+
+    <div class="inline-img">
+      <img src="../images/news/china inline 3.svg" alt="Solar components">
+    </div>
+
+  </div>
+
+  <!-- Share Bar -->
+  <div class="share-bar">
+    <span>Share This Article</span>
+    <div class="share-links">
+      <a href="#" onclick="shareOnFacebook();return false" aria-label="Share on Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" onclick="shareOnTwitter();return false" aria-label="Share on X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" onclick="shareOnWhatsApp();return false" aria-label="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#" onclick="copyLink();return false" aria-label="Copy link"><i class="fa-solid fa-link"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Related Articles -->
+<section class="related-section">
+  <div class="container">
+    <h3>Related Articles</h3>
+    <div class="related-grid">
+      <a href="world-bank-grant.html" class="related-card reveal">
+        <img src="../images/news/world bank inline.svg" alt="World Bank Grant">
+        <div class="body">
+          <div class="rc-date">August 2022</div>
+          <h5>Tavalino Energy Signs Grant Agreement with World Bank on Solar Home Systems</h5>
+          <p>World Bank-backed initiative to deploy solar home systems across off-grid communities in Nigeria.</p>
+          <span>Read More <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../images/footer-logo.png" alt="Tavalino Energy">
+        <p>Tavalino Energy delivers premium solar installation, power backup, and electrical engineering solutions across Nigeria. Energy independence, professionally engineered.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact-grid">
+        <div class="footer-contact-block">
+          <h5>Port Harcourt Office</h5>
+          <p>Suite 311 Ohahuru Plaza,<br>44 Oroazi Ebony Road,<br>Rumueme, Port Harcourt</p>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Abuja Office</h5>
+          <p>1 Taraba Crescent, Maitama,<br>Off Limpopo Street, Maitama,<br>FCT, Abuja, Nigeria</p>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Email Us</h5>
+          <a href="mailto:info@tavalinoenergy.com"><i class="fa-solid fa-envelope icon"></i>info@tavalinoenergy.com</a>
+          <a href="mailto:tavalino.grl@gmail.com"><i class="fa-solid fa-envelope icon"></i>tavalino.grl@gmail.com</a>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Call Us</h5>
+          <a href="tel:+2348033119180"><i class="fa-solid fa-phone icon"></i>+234 803 311 9180</a>
+          <a href="tel:+2349074685070"><i class="fa-solid fa-phone icon"></i>+234 907 468 5070</a>
+          <a href="tel:+2348173119180"><i class="fa-solid fa-phone icon"></i>+234 817 311 9180</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Tavalino Energy Services. All rights reserved | Designed by <a href="http://www.zobrex.ng" target="_blank">Zobrex</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/2348033119180" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+// Preloader
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  setTimeout(() => preloader.classList.add('hidden'), 400);
+});
+
+// Sticky header
+const header = document.getElementById('header');
+const headerLogo = document.getElementById('headerLogo');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY > 80;
+  header.classList.toggle('scrolled', scrolled);
+  headerLogo.src = '../images/footer-logo.png';
+});
+
+// Mobile menu
+const menuToggle = document.getElementById('menuToggle');
+const headerNav = document.getElementById('headerNav');
+
+menuToggle.addEventListener('click', () => {
+  headerNav.classList.toggle('open');
+  menuToggle.classList.toggle('open');
+  const icon = menuToggle.querySelector('i');
+  if (headerNav.classList.contains('open')) {
+    icon.className = 'fa-solid fa-xmark';
+  } else {
+    icon.className = 'fa-solid fa-bars';
+  }
+});
+
+headerNav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    headerNav.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+  });
+});
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+revealEls.forEach(el => revealObserver.observe(el));
+
+// Share functions
+function shareOnFacebook() {
+  var popup = window.open('', '_blank', 'width=600,height=400');
+  if (popup) popup.location.href = 'https://www.facebook.com/sharer.php?u=' + encodeURIComponent(window.location.href);
+}
+function shareOnTwitter() {
+  window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent(document.title), '_blank', 'width=600,height=400');
+}
+function shareOnWhatsApp() {
+  window.open('https://wa.me/?text=' + encodeURIComponent(document.title + ' ' + window.location.href), '_blank');
+}
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    alert('Link copied to clipboard!');
+  });
+}
+</script>
+</body>
+</html>

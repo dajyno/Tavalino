@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tavalino Energy — Solar Installation & Renewable Energy Solutions</title>
+<meta name="description" content="Tavalino Energy delivers premium solar installation, power backup, and renewable energy solutions across Nigeria. Energy independence, professionally engineered.">
+<link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Satoshi','Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#f4f7f6;color:#1a2e2a;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden
+}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.container-fluid{width:100%;padding:0 24px}
+.section{padding:100px 0}
+.section-alt{background:#edf3f0}
+.section-dark{background:#0a1a1f;color:#c8d6d1}
+.section-dark .subtitle{color:#00b67a}
+.section-dark .heading-title{color:#fff}
+.section-dark .section-desc{color:#8aa39b}
+
+/* Typography */
+h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#0a1a1f}
+.subtitle{
+  display:inline-block;font-size:12px;font-weight:600;
+  text-transform:uppercase;letter-spacing:2.5px;
+  color:#00b67a;margin-bottom:12px
+}
+.heading-title{font-size:clamp(30px,3.5vw,48px);margin-bottom:16px}
+.section-desc{font-size:16px;max-width:600px;color:#5a7a72;line-height:1.7;margin-bottom:0}
+.text-center{text-align:center}
+.text-center .section-desc{margin:0 auto}
+.section-header{margin-bottom:56px}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Space Grotesk','Inter',sans-serif;font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.5px;
+  padding:16px 34px;border-radius:8px;
+  cursor:pointer;border:none;text-decoration:none;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1);
+  position:relative;overflow:hidden
+}
+.btn-primary{background:#004638;color:#fff}
+.btn-primary:hover{background:#005c48;transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,70,56,0.3)}
+.btn-secondary{background:#00b67a;color:#fff}
+.btn-secondary:hover{background:#009e6a;transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,182,122,0.3)}
+.btn-outline{background:transparent;color:#004638;border:2px solid #004638}
+.btn-outline:hover{background:#004638;color:#fff;transform:translateY(-3px)}
+.btn-light{background:#fff;color:#004638}
+.btn-light:hover{background:#f4f7f6;transform:translateY(-3px);box-shadow:0 12px 32px rgba(255,255,255,0.2)}
+.btn-gold{background:#f8c51c;color:#0a1a1f}
+.btn-gold:hover{background:#e0b010;transform:translateY(-3px);box-shadow:0 12px 32px rgba(248,197,28,0.35)}
+
+/* Preloader */
+.preloader{
+  position:fixed;inset:0;z-index:99999;
+  background:#0a1a1f;display:flex;
+  align-items:center;justify-content:center;
+  transition:opacity 0.6s ease,visibility 0.6s ease
+}
+.preloader.hidden{opacity:0;visibility:hidden}
+.preloader-spinner{
+  width:48px;height:48px;
+  border:3px solid rgba(0,182,122,0.15);
+  border-top-color:#00b67a;border-radius:50%;
+  animation:spin 0.8s linear infinite
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.preloader-label{
+  position:absolute;margin-top:80px;
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:13px;font-weight:600;letter-spacing:3px;
+  color:#00b67a;text-transform:uppercase
+}
+
+/* Top Bar */
+.top-bar{
+  background:#0a1a1f;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)
+}
+.top-bar .container{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px
+}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.top-bar-item{
+  display:flex;align-items:center;gap:7px;
+  font-size:12px;color:#8aa39b;transition:color 0.2s
+}
+.top-bar-item i{font-size:12px;color:#00b67a;width:14px}
+.top-bar-item:hover{color:#e0ece7}
+.top-bar-social{display:flex;gap:10px}
+.top-bar-social a{
+  width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+  border-radius:6px;color:#6a8e84;font-size:12px;
+  transition:all 0.25s ease;background:rgba(255,255,255,0.03)
+}
+.top-bar-social a:hover{background:#00b67a;color:#fff;transform:translateY(-2px)}
+
+/* Header */
+.header{
+  position:sticky;top:0;width:100%;z-index:1000;
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  background:#fff;border-bottom:1px solid rgba(0,0,0,0.05)
+}
+.header.scrolled{
+  background:rgba(0,70,56,0.92);
+  backdrop-filter:blur(24px) saturate(1.3);-webkit-backdrop-filter:blur(24px) saturate(1.3);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 4px 30px rgba(0,0,0,0.12)
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;gap:24px
+}
+.header-logo{display:flex;align-items:center;gap:10px}
+.header-logo img{height:44px;transition:all 0.3s ease}
+.header-logo span{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-weight:900;font-size:18px;letter-spacing:2px;
+  color:#fff;transition:color 0.2s
+}
+.header-logo span em{font-style:normal;color:#00b67a}
+.header-nav{display:flex;align-items:center;gap:8px}
+.header-nav a{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:13px;font-weight:500;letter-spacing:0.3px;
+  color:#3a5a52;padding:8px 16px;border-radius:6px;
+  transition:all 0.25s ease;position:relative
+}
+.header-nav a:hover,.header-nav a.active{color:#004638;background:rgba(0,70,56,0.06)}
+.header.scrolled .header-nav a{color:#b0c8c0}
+.header.scrolled .header-nav a:hover,.header.scrolled .header-nav a.active{color:#fff;background:rgba(255,255,255,0.05)}
+.header-nav .nav-cta{
+  background:#004638;color:#fff;font-weight:700;padding:10px 24px;
+  border-radius:6px;margin-left:8px
+}
+.header-nav .nav-cta:hover{background:#005c48;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,70,56,0.3)}
+.menu-toggle{display:none;background:none;border:none;font-size:22px;color:#0a1a1f;cursor:pointer;padding:8px;border-radius:6px;transition:background 0.2s}
+.menu-toggle:hover{background:rgba(0,0,0,0.04)}
+.header.scrolled .menu-toggle{color:#fff}
+.header.scrolled .menu-toggle:hover{background:rgba(255,255,255,0.06)}
+
+/* Hero */
+.hero{
+  position:relative;min-height:100vh;display:flex;align-items:center;
+  background:#f9f4e8;overflow:hidden;margin-top:-1px
+}
+.hero .container{width:100%;padding:140px 24px 80px}
+.hero__inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero__left{max-width:580px}
+.hero__tagline{
+  font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:3px;
+  color:#004638;margin-bottom:14px;font-family:'Space Grotesk','Inter',sans-serif
+}
+.hero__title{
+  font-size:clamp(36px,5vw,58px);font-weight:900;color:#0a1a1f;line-height:1.08;margin-bottom:18px
+}
+.hero__title span{
+  background:linear-gradient(135deg,#004638,#00b67a,#f8c51c);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text
+}
+.hero__text{
+  font-size:clamp(15px,1.4vw,17px);color:#5a7a72;line-height:1.8;margin-bottom:32px;max-width:500px
+}
+.hero__btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.btn-gold{background:#f8c51c;color:#0a1a1f}
+.btn-gold:hover{background:#e0b010;transform:translateY(-3px);box-shadow:0 12px 32px rgba(248,197,28,0.35)}
+
+/* Right - Blob */
+.hero__right{position:relative;display:flex;align-items:center;justify-content:center;min-height:420px}
+.hero__blob-bg{
+  position:absolute;width:clamp(320px,42vw,540px);height:clamp(320px,42vw,540px);
+  background:linear-gradient(135deg,#004638 0%,#00b67a 40%,#f8c51c 80%);
+  border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation:blobMove 8s ease-in-out infinite;
+  opacity:0.3;filter:blur(40px)
+}
+.hero__blob{
+  position:relative;z-index:2;
+  width:clamp(300px,40vw,520px);height:clamp(300px,40vw,520px);
+  border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation:blobMove 8s ease-in-out infinite reverse;
+  overflow:hidden;box-shadow:0 30px 80px rgba(0,70,56,0.25)
+}
+.hero__blob img{width:100%;height:100%;object-fit:cover;display:block}
+.hero__blob::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(0,70,56,0.15),transparent 50%);
+  pointer-events:none
+}
+.hero__badge{
+  position:absolute;z-index:3;background:#fff;border-radius:16px;
+  padding:14px 20px;box-shadow:0 10px 40px rgba(0,0,0,0.08);
+  text-align:center;animation:floatBadge 3s ease-in-out infinite
+}
+.hero__badge-num{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:20px;font-weight:900;color:#004638;line-height:1
+}
+.hero__badge-label{font-size:11px;color:#5a7a72;font-weight:600;margin-top:2px}
+.hero__badge--1{top:8%;right:0;background:#004638}
+.hero__badge--1 .hero__badge-num{color:#f8c51c}
+.hero__badge--1 .hero__badge-label{color:rgba(255,255,255,0.75)}
+.hero__badge--2{bottom:12%;left:-5%}
+@keyframes blobMove{
+  0%,100%{border-radius:30% 70% 70% 30% / 30% 30% 70% 70%}
+  25%{border-radius:58% 42% 75% 25% / 76% 46% 54% 24%}
+  50%{border-radius:50% 50% 33% 67% / 55% 27% 73% 45%}
+  75%{border-radius:33% 67% 58% 42% / 63% 68% 32% 37%}
+}
+@keyframes floatBadge{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+/* Brands */
+.brands{padding:60px 0;background:#edf3f0;overflow:hidden}
+.brands-title{
+  text-align:center;font-size:14px;font-weight:600;
+  color:#5a7a72;letter-spacing:1.5px;margin-bottom:36px;
+  font-family:'Space Grotesk','Inter',sans-serif;text-transform:uppercase
+}
+.brand-track{
+  display:flex;gap:48px;animation:brandScroll 30s linear infinite;
+  width:max-content;align-items:center
+}
+.brand-track img{height:100px;opacity:0.4;transition:opacity 0.3s;filter:grayscale(1)}
+.brand-track img:hover{opacity:0.8;filter:grayscale(0)}
+.brand-track span{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:16px;font-weight:700;color:#8aa39b;
+  white-space:nowrap;letter-spacing:1px
+}
+@keyframes brandScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.brand-wrapper{position:relative;overflow:hidden}
+.brand-wrapper::before,.brand-wrapper::after{
+  content:'';position:absolute;top:0;width:120px;height:100%;z-index:2;pointer-events:none
+}
+.brand-wrapper::before{left:0;background:linear-gradient(90deg,#edf3f0,transparent)}
+.brand-wrapper::after{right:0;background:linear-gradient(-90deg,#edf3f0,transparent)}
+
+/* About */
+.about-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about-content .heading-title{font-size:clamp(28px,2.8vw,40px)}
+.about-content .section-desc{font-size:15px;margin-bottom:32px}
+.about-counters{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.about-counter{
+  background:#fff;border:1px solid #e0ece7;border-radius:12px;padding:24px;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1)
+}
+.about-counter:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,70,56,0.06);border-color:#bdd6ce}
+.about-counter .num{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:32px;font-weight:900;color:#004638;line-height:1
+}
+.about-counter .num small{font-size:14px;font-weight:600;color:#00b67a}
+.about-counter .label{font-size:13px;color:#5a7a72;margin-top:6px;font-weight:500}
+.about-image{
+  border-radius:16px;overflow:hidden;position:relative;
+  box-shadow:0 24px 64px rgba(0,70,56,0.1)
+}
+.about-image img{width:100%;height:480px;object-fit:cover;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.about-image:hover img{transform:scale(1.06)}
+
+/* Services */
+.services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.service-card{
+  background:#fff;border:1px solid #e0ece7;border-radius:14px;
+  padding:32px 28px;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  position:relative;overflow:hidden
+}
+.service-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:#004638;transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s cubic-bezier(0.16,1,0.3,1)
+}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card:hover{transform:translateY(-8px);box-shadow:0 20px 48px rgba(0,70,56,0.08);border-color:#bdd6ce}
+.service-icon{
+  width:56px;height:56px;display:flex;align-items:center;justify-content:center;
+  background:#edf3f0;border-radius:12px;margin-bottom:20px;
+  transition:all 0.35s ease
+}
+.service-card:hover .service-icon{background:#004638;transform:scale(1.05)}
+.service-card:hover .service-icon svg path{fill:#fff}
+.service-icon svg{width:28px;height:28px}
+.service-icon svg path{transition:fill 0.35s ease;fill:#004638}
+.service-card h3{font-size:17px;margin-bottom:10px}
+.service-card h3 a{color:inherit;transition:color 0.2s}
+.service-card:hover h3 a{color:#004638}
+.service-card p{font-size:14px;color:#5a7a72;line-height:1.7;margin-bottom:0}
+
+/* Projects */
+.projects-list{display:grid;gap:32px}
+.project-item{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:center;
+  background:#fff;border-radius:16px;overflow:hidden;
+  border:1px solid #e0ece7;transition:all 0.4s cubic-bezier(0.16,1,0.3,1)
+}
+.project-item:hover{box-shadow:0 20px 56px rgba(0,70,56,0.06);border-color:#bdd6ce}
+.project-item.reverse{direction:rtl}
+.project-item.reverse .project-content{direction:ltr}
+.project-item.reverse .project-image{direction:ltr}
+.project-image{overflow:hidden;height:100%;min-height:380px}
+.project-image img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1)}
+.project-item:hover .project-image img{transform:scale(1.06)}
+.project-content{padding:40px}
+.project-item.reverse .project-content{padding:40px}
+.project-content .tag{
+  display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;
+  letter-spacing:1.5px;color:#00b67a;margin-bottom:12px
+}
+.project-content h3{font-size:24px;margin-bottom:16px}
+.project-content h3 a{color:inherit;transition:color 0.2s}
+.project-content h3 a:hover{color:#004638}
+.project-content p{font-size:14px;color:#5a7a72;line-height:1.7;margin-bottom:20px}
+.project-features{display:grid;gap:10px;margin-bottom:24px}
+.project-features li{
+  display:flex;align-items:center;gap:10px;
+  font-size:14px;color:#3a5a52
+}
+.project-features li i{color:#00b67a;font-size:12px;width:18px;height:18px;display:flex;align-items:center;justify-content:center;background:rgba(0,182,122,0.1);border-radius:50%}
+
+/* CTA Strip */
+.cta-strip{
+  background:#004638;position:relative;overflow:hidden
+}
+.cta-strip::before{
+  content:'';position:absolute;top:-50%;right:-20%;
+  width:600px;height:600px;border-radius:50%;
+  background:rgba(0,182,122,0.08);pointer-events:none
+}
+.cta-strip::after{
+  content:'';position:absolute;bottom:-30%;left:-10%;
+  width:400px;height:400px;border-radius:50%;
+  background:rgba(248,197,28,0.04);pointer-events:none
+}
+.cta-strip .container{position:relative;z-index:2}
+.cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.cta-content .heading-title{color:#fff}
+.cta-content .section-desc{color:#8ec9b8}
+.cta-list{display:grid;gap:20px}
+.cta-list li{
+  display:flex;align-items:flex-start;gap:16px;
+  padding:20px 24px;background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.06);border-radius:12px;
+  transition:all 0.35s ease;
+  font-size:15px;color:#e0ece7;font-weight:500
+}
+.cta-list li:hover{background:rgba(255,255,255,0.08);transform:translateX(6px)}
+.cta-list li .num{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:20px;font-weight:900;color:#f8c51c;
+  min-width:36px;line-height:1
+}
+
+/* Why Choose Us */
+.choose-grid{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+.choose-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.choose-card{
+  background:#fff;border:1px solid #e0ece7;border-radius:14px;
+  padding:28px 24px;transition:all 0.35s cubic-bezier(0.16,1,0.3,1)
+}
+.choose-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,70,56,0.06);border-color:#bdd6ce}
+.choose-card .icon{
+  width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+  background:#edf3f0;border-radius:10px;margin-bottom:16px
+}
+.choose-card .icon svg{width:24px;height:24px}
+.choose-card .icon svg path{fill:#004638}
+.choose-card h4{font-size:16px;margin-bottom:8px}
+.choose-card p{font-size:13px;color:#5a7a72;line-height:1.7;margin-bottom:0}
+.choose-card.featured{background:#004638;border-color:#004638}
+.choose-card.featured h4,.choose-card.featured p{color:#fff}
+.choose-card.featured .icon{background:rgba(255,255,255,0.1)}
+.choose-card.featured .icon svg path{fill:#f8c51c}
+.choose-card.featured:hover{background:#005c48}
+.choose-card.image-card{padding:0;overflow:hidden;border:none;background:transparent}
+.choose-card.image-card .img-wrap{
+  border-radius:14px;overflow:hidden;position:relative;height:100%;min-height:240px
+}
+.choose-card.image-card .img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease}
+.choose-card.image-card:hover .img-wrap img{transform:scale(1.06)}
+.choose-card.image-card .img-wrap .overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(10,26,31,0.8),transparent);
+  display:flex;flex-direction:column;justify-content:flex-end;padding:24px
+}
+.choose-card.image-card .img-wrap .overlay h4{color:#fff;font-size:17px;margin-bottom:4px}
+.choose-card.image-card .img-wrap .overlay span{color:#8aa39b;font-size:12px}
+
+/* Testimonials */
+.testimonials-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.testimonial-card{
+  background:#fff;border:1px solid #e0ece7;border-radius:14px;padding:32px;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1)
+}
+.testimonial-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,70,56,0.06);border-color:#bdd6ce}
+.testimonial-card .stars{color:#f8c51c;font-size:12px;display:flex;gap:2px;margin-bottom:16px}
+.testimonial-card blockquote{font-size:15px;color:#3a5a52;line-height:1.7;margin-bottom:20px;font-style:italic}
+.testimonial-card .author{display:flex;align-items:center;gap:14px}
+.testimonial-card .author img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.testimonial-card .author .name{font-size:15px;font-weight:700;color:#0a1a1f}
+.testimonial-card .author .role{font-size:12px;color:#5a7a72}
+
+/* ========== TESTIMONIAL OPTIONS PREVIEW ========== */
+
+/* Option A — Enhanced Grid */
+.test-opt-a{position:relative}
+.test-opt-a::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(rgba(0,182,122,0.05) 1px,transparent 1px);
+  background-size:24px 24px;pointer-events:none
+}
+.test-opt-a .testimonial-card{position:relative;overflow:hidden}
+.test-opt-a .testimonial-card::before{
+  content:'\201C';position:absolute;top:-8px;right:24px;
+  font-size:100px;line-height:1;color:rgba(0,182,122,0.06);
+  font-family:Georgia,serif;pointer-events:none
+}
+.test-opt-a .author-img-placeholder{
+  width:44px;height:44px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:16px;color:#fff;flex-shrink:0
+}
+.test-opt-a .rating-summary{text-align:center;margin-bottom:32px}
+.test-opt-a .rating-summary .big-stars{color:#f8c51c;font-size:20px;gap:4px;display:flex;justify-content:center;margin-bottom:8px}
+.test-opt-a .rating-summary .rating-text{font-size:14px;color:#5a7a72}
+.test-opt-a .rating-summary .rating-text strong{color:#0a1a1f;font-size:18px}
+
+/* Option B — Swiper Carousel */
+.test-opt-b{padding:80px 0;background:linear-gradient(135deg,#0a1a1f 0%,#0d2a2a 100%);position:relative;overflow:hidden}
+.test-opt-b::before{
+  content:'';position:absolute;top:-40%;right:-20%;width:500px;height:500px;
+  border-radius:50%;background:radial-gradient(circle,rgba(0,182,122,0.06),transparent 70%)
+}
+.test-opt-b .section-header .subtitle{color:rgba(255,255,255,0.5)}
+.test-opt-b .section-header .heading-title{color:#fff}
+.test-opt-b .section-header .section-desc{color:rgba(255,255,255,0.4)}
+.test-opt-b .swiper{max-width:650px;margin:0 auto}
+.test-opt-b .swiper-slide{height:auto}
+.test-opt-b .testi-b-card{
+  background:rgba(255,255,255,0.04);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.06);border-radius:20px;
+  padding:48px 48px 40px;text-align:center;height:100%
+}
+.test-opt-b .testi-b-quote{font-size:48px;color:rgba(0,182,122,0.2);line-height:1;margin-bottom:12px;font-family:Georgia,serif}
+.test-opt-b .testi-b-stars{color:#f8c51c;font-size:16px;display:flex;gap:4px;justify-content:center;margin-bottom:16px}
+.test-opt-b .testi-b-text{font-size:17px;color:rgba(255,255,255,0.8);line-height:1.8;margin-bottom:28px;font-style:italic}
+.test-opt-b .testi-b-author{display:flex;align-items:center;justify-content:center;gap:14px}
+.test-opt-b .testi-b-avatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:#fff}
+.test-opt-b .testi-b-name{font-size:15px;font-weight:700;color:#fff}
+.test-opt-b .testi-b-role{font-size:12px;color:rgba(255,255,255,0.4)}
+.test-opt-b .swiper-pagination{position:static;margin-top:28px}
+.test-opt-b .swiper-pagination-bullet{background:rgba(255,255,255,0.15);opacity:1;width:10px;height:10px;transition:all 0.3s}
+.test-opt-b .swiper-pagination-bullet-active{background:#00b67a;width:28px;border-radius:5px}
+.test-opt-b .swiper-nav{display:flex;gap:12px;justify-content:center;margin-top:20px}
+.test-opt-b .swiper-nav button{
+  width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.5);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all 0.25s;font-size:14px
+}
+.test-opt-b .swiper-nav button:hover{background:rgba(0,182,122,0.15);border-color:#00b67a;color:#00b67a}
+
+/* Option preview badge */
+.opt-badge{
+  display:inline-block;background:#e8f3ef;padding:4px 16px;border-radius:20px;
+  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:#008f62;margin-bottom:8px
+}
+.test-opt-b .opt-badge{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)}
+
+/* Pricing */
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:end}
+.pricing-card{
+  background:#fff;border:1px solid #e0ece7;border-radius:16px;
+  padding:40px 32px;transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  position:relative
+}
+.pricing-card:hover{transform:translateY(-8px);box-shadow:0 24px 56px rgba(0,70,56,0.08);border-color:#bdd6ce}
+.pricing-card.popular{
+  border-color:#004638;border-width:2px;
+  box-shadow:0 8px 32px rgba(0,70,56,0.08);
+  transform:scale(1.03)
+}
+.pricing-card.popular:hover{transform:scale(1.03) translateY(-8px)}
+.pricing-card .tag{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);
+  background:#f8c51c;color:#0a1a1f;font-size:10px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;
+  padding:4px 16px;border-radius:4px;font-family:'Space Grotesk','Inter',sans-serif
+}
+.pricing-card .plan-name{font-size:18px;color:#5a7a72;font-weight:600;margin-bottom:16px}
+.pricing-card .price{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:44px;font-weight:900;color:#0a1a1f;line-height:1;margin-bottom:4px
+}
+.pricing-card .price small{font-size:16px;font-weight:600;color:#8aa39b}
+.pricing-card .price-desc{font-size:13px;color:#8aa39b;margin-bottom:28px}
+.pricing-card .pricing-features{display:grid;gap:12px;margin-bottom:32px}
+.pricing-card .pricing-features li{
+  display:flex;align-items:center;gap:10px;
+  font-size:14px;color:#3a5a52
+}
+.pricing-card .pricing-features li i{color:#00b67a;font-size:11px}
+.pricing-card .btn{width:100%;justify-content:center}
+.pricing-card.popular .btn-primary{background:#00b67a}
+.pricing-card.popular .btn-primary:hover{background:#009e6a;box-shadow:0 12px 32px rgba(0,182,122,0.3)}
+
+/* Global Map */
+.map-section{background:#0a1a1f;position:relative;overflow:hidden}
+.map-section .heading-title{color:#fff}
+.map-section .section-desc{color:#8aa39b}
+.map-wrapper{position:relative;margin-top:48px;background:#0e2a2f;border-radius:12px;overflow:hidden}
+.map-wrapper img{width:100%;height:auto;display:block;opacity:0.6}
+.map-pins{position:absolute;inset:0;pointer-events:none}
+.map-pin{
+  position:absolute;width:14px;height:14px;
+  background:#f8c51c;border-radius:50%;
+  box-shadow:0 0 0 6px rgba(248,197,28,0.25),0 0 24px rgba(248,197,28,0.2);
+  animation:pulse 2s ease-in-out infinite;
+  z-index:3
+}
+.map-pin::after{
+  content:attr(data-label);position:absolute;top:-30px;left:50%;transform:translateX(-50%);
+  font-size:12px;font-weight:700;color:#0a1a1f;white-space:nowrap;
+  background:rgba(255,255,255,0.95);padding:4px 12px;border-radius:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1)
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.6;transform:scale(1.3)}}
+.map-pin:nth-child(1){top:80%;left:52%}
+.map-pin:nth-child(2){top:72%;left:25%}
+.map-pin:nth-child(3){top:45%;left:47%}
+.map-pin:nth-child(4){top:72%;left:50%}
+.map-pin:nth-child(5){top:78%;left:60%}
+.map-pin:nth-child(6){top:75%;left:38%}
+
+/* FAQ */
+.faq-wrapper{max-width:800px;margin:0 auto}
+.faq-item{
+  border-bottom:1px solid #e0ece7;
+  transition:all 0.25s ease
+}
+.faq-question{
+  padding:22px 0;display:flex;justify-content:space-between;align-items:center;
+  cursor:pointer;font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:16px;font-weight:600;color:#0a1a1f;
+  user-select:none;transition:color 0.2s
+}
+.faq-question:hover{color:#004638}
+.faq-question .icon{
+  width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+  font-size:16px;color:#00b67a;transition:all 0.3s ease;
+  border-radius:6px;background:rgba(0,182,122,0.08);flex-shrink:0
+}
+.faq-item.open .faq-question .icon{transform:rotate(45deg);background:#004638;color:#fff}
+.faq-answer{
+  max-height:0;overflow:hidden;
+  transition:max-height 0.4s cubic-bezier(0.16,1,0.3,1);
+  padding:0
+}
+.faq-item.open .faq-answer{max-height:300px;padding:0 0 24px}
+.faq-answer p{font-size:14px;line-height:1.7;color:#5a7a72;margin:0}
+
+/* Footer */
+.footer{padding:80px 0 0;background:#0a1a1f}
+.footer-grid{display:grid;grid-template-columns:2fr 3fr;gap:48px}
+.footer-brand img{height:40px;margin-bottom:16px}
+.footer-brand p{font-size:14px;color:#6a8e84;line-height:1.7;margin-bottom:20px;max-width:340px}
+.footer-social{display:flex;gap:8px}
+.footer-social a{
+  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,0.08);border-radius:8px;
+  color:#6a8e84;font-size:13px;transition:all 0.25s ease
+}
+.footer-social a:hover{border-color:#00b67a;color:#fff;background:rgba(0,182,122,0.1);transform:translateY(-3px)}
+.footer-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-content:start}
+.footer-contact-block h5{
+  font-family:'Space Grotesk','Inter',sans-serif;font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;color:#e0ece7;margin-bottom:16px
+}
+.footer-contact-block p{font-size:13px;color:#6a8e84;line-height:1.8;margin:0}
+.footer-contact-block a{font-size:13px;color:#6a8e84;display:block;line-height:1.8;transition:color 0.2s}
+.footer-contact-block a:hover{color:#00b67a}
+.footer-contact-block .icon{color:#00b67a;margin-right:8px;width:16px;display:inline-block}
+.footer-bottom{
+  margin-top:56px;padding:24px 0;
+  border-top:1px solid rgba(255,255,255,0.04);
+  text-align:center
+}
+.footer-bottom p{font-size:12px;color:#4a6e64;margin:0}
+.footer-bottom a{color:#00b67a;font-weight:700;transition:color 0.2s}
+.footer-bottom a:hover{color:#f8c51c}
+
+/* WhatsApp Float */
+.wa-float{
+  position:fixed;bottom:28px;right:28px;z-index:9999;
+  width:54px;height:54px;
+  background:#00b67a;color:#fff;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:26px;text-decoration:none;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1);
+  box-shadow:0 6px 24px rgba(0,182,122,0.3)
+}
+.wa-float:hover{background:#009e6a;transform:translateY(-4px) scale(1.05);box-shadow:0 12px 40px rgba(0,182,122,0.4);color:#fff}
+
+/* Scroll Reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.reveal-scale{opacity:0;transform:scale(0.92);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal-scale.visible{opacity:1;transform:scale(1)}
+.r-d1{transition-delay:0.08s}
+.r-d2{transition-delay:0.16s}
+.r-d3{transition-delay:0.24s}
+.r-d4{transition-delay:0.32s}
+.r-d5{transition-delay:0.4s}
+
+/* Responsive */
+@media(max-width:1024px){
+  .hero__inner{grid-template-columns:1fr;gap:48px}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .choose-grid{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+  .pricing-card.popular{transform:none}
+  .pricing-card.popular:hover{transform:translateY(-8px)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .cta-grid{grid-template-columns:1fr;gap:40px}
+  .about-wrapper{grid-template-columns:1fr;gap:48px}
+  .about-image img{height:340px}
+  .project-item{grid-template-columns:1fr}
+  .project-item.reverse{direction:ltr}
+  .project-item.reverse .project-content{padding:32px}
+  .project-content{padding:32px}
+  .hero__right{min-height:340px}
+  .hero__blob{width:clamp(280px,50vw,400px);height:clamp(280px,50vw,400px)}
+  .hero__blob-bg{width:clamp(300px,52vw,420px);height:clamp(300px,52vw,420px)}
+  .hero__badge--1{top:5%;right:5%}
+  .hero__badge--2{bottom:5%;left:5%}
+}
+@media(max-width:768px){
+  .section{padding:72px 0}
+  .header-nav{
+    position:fixed;top:0;right:-100%;width:300px;height:100vh;
+    background:rgba(10,26,31,0.98);backdrop-filter:blur(24px);
+    flex-direction:column;padding:80px 32px 32px;gap:4px;
+    transition:right 0.4s cubic-bezier(0.16,1,0.3,1);
+    z-index:99;border-left:1px solid rgba(255,255,255,0.04)
+  }
+  .header-nav.open{right:0}
+  .header-nav a{padding:14px 20px;font-size:15px;color:#d0e2db}
+  .header-nav a:hover,.header-nav a.active{color:#fff;background:rgba(255,255,255,0.06)}
+  .header-nav .nav-cta{margin-left:0;margin-top:8px;text-align:center}
+  .menu-toggle{display:block;z-index:100}
+  .menu-toggle.open{position:fixed;top:24px;right:24px;color:#00b67a}
+  .services-grid{grid-template-columns:1fr}
+  .choose-cards{grid-template-columns:1fr}
+  .testimonials-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:40px}
+  .footer-contact-grid{grid-template-columns:1fr;gap:24px}
+  .hero .container{padding:120px 24px 60px}
+  .hero__right{min-height:280px}
+  .hero__blob{width:clamp(240px,60vw,340px);height:clamp(240px,60vw,340px)}
+  .hero__blob-bg{width:clamp(260px,62vw,360px);height:clamp(260px,62vw,360px)}
+  .hero__badge--1{top:3%;right:3%}
+  .hero__badge--2{bottom:3%;left:3%}
+  .top-bar .container{justify-content:center}
+  .top-bar-left,.top-bar-right{justify-content:center}
+  .about-counters{grid-template-columns:1fr 1fr}
+  .project-image{min-height:260px}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .hero__btns{flex-direction:column}
+  .hero__btns .btn{justify-content:center}
+  .hero__right{min-height:200px}
+  .hero__blob{width:220px;height:220px}
+  .hero__blob-bg{width:240px;height:240px}
+  .hero__badge{display:none}
+  .about-counters{grid-template-columns:1fr}
+  .cta-list li{padding:16px 20px;font-size:14px}
+  .pricing-card{padding:32px 24px}
+  .footer-bottom{flex-direction:column;text-align:center}
+  .btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-spinner"></div>
+  <div class="preloader-label">Tavalino</div>
+</div>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:info@tavalinoenergy.com" class="top-bar-item">
+        <i class="fa-regular fa-envelope"></i> info@tavalinoenergy.com
+      </a>
+      <a href="tel:+2348033119180" class="top-bar-item">
+        <i class="fa-solid fa-phone"></i> +234 803 311 9180
+      </a>
+      <span class="top-bar-item">
+        <i class="fa-regular fa-clock"></i> Mon–Fri, 8:00am – 5:00pm
+      </span>
+    </div>
+    <div class="top-bar-right">
+      <div class="top-bar-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="images/footer-logo.png" alt="Tavalino Energy" id="headerLogo">
+      </a>
+      <nav class="header-nav" id="headerNav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="projects.html">Projects</a>
+        <a href="news.html">News</a>
+        <a href="contact.html" class="nav-cta">Get a Quote</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero__inner">
+      <div class="hero__left">
+        <div class="hero__tagline">Premium Solar Energy Since 2002</div>
+        <h1 class="hero__title">Power Your Future with <span>Clean Solar Energy</span></h1>
+        <p class="hero__text">Tavalino Energy delivers turnkey solar installation, power backup, and electrical engineering across Nigeria. Energy independence, professionally engineered — from consultation to commissioning.</p>
+        <div class="hero__btns">
+          <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+          <a href="services.html" class="btn btn-gold">Our Services</a>
+        </div>
+
+      </div>
+      <div class="hero__right">
+        <div class="hero__blob-bg"></div>
+        <div class="hero__blob">
+          <img src="images/projects/real-2.jpg" alt="Solar panel installation">
+        </div>
+        <div class="hero__badge hero__badge--1">
+          <div class="hero__badge-num">300kw+</div>
+          <div class="hero__badge-label">Clean Energy Installed</div>
+        </div>
+        <div class="hero__badge hero__badge--2">
+          <div class="hero__badge-num">725+</div>
+          <div class="hero__badge-label">Happy Clients</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brands -->
+<section class="brands">
+  <div class="container">
+    <p class="brands-title">Trusted by Industry Leaders Worldwide</p>
+    <div class="brand-wrapper">
+      <div class="brand-track">
+        <img src="images/partners/tavaliono-1.png" alt="Partner">
+        <img src="images/partners/tavaliono-2.png" alt="Partner">
+        <img src="images/partners/tavaliono-3.png" alt="Partner">
+        <img src="images/partners/tavalino-4.png" alt="Partner">
+        <img src="images/partners/tav-partner-1.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-2.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-3.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-4.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-5.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-6.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-7.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-8.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-9.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-10.jpg" alt="Partner">
+        <img src="images/partners/tavaliono-1.png" alt="Partner">
+        <img src="images/partners/tavaliono-2.png" alt="Partner">
+        <img src="images/partners/tavaliono-3.png" alt="Partner">
+        <img src="images/partners/tavalino-4.png" alt="Partner">
+        <img src="images/partners/tav-partner-1.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-2.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-3.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-4.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-5.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-6.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-7.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-8.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-9.jpg" alt="Partner">
+        <img src="images/partners/tav-partner-10.jpg" alt="Partner">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-wrapper">
+      <div class="about-content">
+        <div class="reveal">
+          <span class="subtitle">About Us</span>
+          <h2 class="heading-title">Your Trusted Partner in Renewable Energy</h2>
+          <p class="section-desc">We make going solar effortless. From your first consultation to system commissioning and beyond, Tavalino Energy delivers dependable solar power solutions without compromise. Our cross-disciplinary team brings decades of combined experience to every project.</p>
+        </div>
+        <div class="about-counters reveal r-d2">
+          <div class="about-counter">
+            <div class="num"><span class="counter" data-target="300">0</span><small>kw+</small></div>
+            <div class="label">Renewable Energy Installed</div>
+          </div>
+          <div class="about-counter">
+            <div class="num"><span class="counter" data-target="59">0</span><small>+</small></div>
+            <div class="label">Projects Completed</div>
+          </div>
+          <div class="about-counter">
+            <div class="num"><span class="counter" data-target="725">0</span><small>+</small></div>
+            <div class="label">Happy Clients Served</div>
+          </div>
+          <div class="about-counter">
+            <div class="num"><span class="counter" data-target="24">0</span><small>+</small></div>
+            <div class="label">Years of Expertise</div>
+          </div>
+        </div>
+        <div class="reveal r-d3" style="margin-top:28px">
+          <a href="docs/sample.pdf" class="btn btn-primary">View our Company Profile <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="about-image reveal-right">
+        <img src="images/projects/abt-img.png" alt="Solar panel installation">
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="subtitle">Our Services</span>
+      <h2 class="heading-title">Comprehensive Solar Energy Solutions</h2>
+      <p class="section-desc">From residential off-grid systems to commercial mini-grids and industrial power backup — we engineer reliability into every installation.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal r-d1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#004638" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3><a href="services.html">Power Distribution and Energy Management</a></h3>
+        <p>End-to-end power distribution solutions and intelligent energy management systems for residential, commercial, and industrial applications.</p>
+      </div>
+      <div class="service-card reveal r-d2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 12H18L15 21L9 3L6 12H2" stroke="#004638" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3><a href="services.html">Solar Mini Grid System</a></h3>
+        <p>Community-scale solar mini grids delivering reliable, affordable electricity to neighbourhoods, estates, and rural communities.</p>
+      </div>
+      <div class="service-card reveal r-d3">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="3" stroke="#004638" stroke-width="1.5"/>
+            <path d="M8 12L11 15L16 9" stroke="#004638" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3><a href="services.html">Engineering and Lighting Services</a></h3>
+        <p>Professional electrical engineering design, installation, and solar lighting solutions for homes, businesses, and public spaces.</p>
+      </div>
+      <div class="service-card reveal r-d4">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L12 6M12 2L10 4M12 2L14 4M18 12H22M2 12H6M16.24 7.76L19.07 4.93M7.76 7.76L4.93 4.93M12 22V18M12 22L10 20M12 22L14 20M18 12C18 15.3137 15.3137 18 12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12Z" stroke="#004638" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3><a href="services.html">Solar Street / Flood Light</a></h3>
+        <p>High-performance solar street lights and flood lights with automated dusk-to-dawn operation for security, roadway, and perimeter illumination.</p>
+      </div>
+      <div class="service-card reveal r-d2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C13.1 2 14 2.9 14 4C14 5.1 13.1 6 12 6C10.9 6 10 5.1 10 4C10 2.9 10.9 2 12 2ZM7 22C5.9 22 5 21.1 5 20C5 18.9 5.9 18 7 18C8.1 18 9 18.9 9 20C9 21.1 8.1 22 7 22ZM17 22C15.9 22 15 21.1 15 20C15 18.9 15.9 18 17 18C18.1 18 19 18.9 19 20C19 21.1 18.1 22 17 22ZM19 10H14.5V6H9.5V10H5L9 18H15L19 10Z" stroke="#004638" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3><a href="services.html">Solar Water Pumps</a></h3>
+        <p>Solar-powered water pumping systems for boreholes, irrigation, and water supply — efficient, maintenance-free, and grid-independent.</p>
+      </div>
+      <div class="service-card reveal r-d3">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 10V3L4 14H11V21L20 10H13Z" stroke="#004638" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3><a href="services.html">Battery Regeneration Workshop</a></h3>
+        <p>Specialized battery restoration service that extends the life of lead-acid and gel batteries through professional electrochemical regeneration.</p>
+      </div>
+    </div>
+    <div class="text-center reveal" style="margin-top:40px">
+      <a href="services.html" class="btn btn-primary">View All Services <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="section" id="projects">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="subtitle">Our Portfolio</span>
+      <h2 class="heading-title">Recent Solar Installations</h2>
+      <p class="section-desc">Real projects, real results. Each installation reflects our commitment to quality craftsmanship and technical excellence.</p>
+    </div>
+    <div class="projects-list">
+      <div class="project-item reveal">
+        <div class="project-content">
+          <span class="tag">Residential</span>
+          <h3><a href="projects.html">10KVA Off-Grid Solar System — Port Harcourt</a></h3>
+          <p>Complete off-grid solar installation with 10KVA inverter, 3.2kW solar array, and 10kWh lithium battery storage for a 4-bedroom home.</p>
+          <ul class="project-features">
+            <li><i class="fa-solid fa-check"></i> 10KVA Pure Sine Wave Inverter</li>
+            <li><i class="fa-solid fa-check"></i> 8x 400W Monocrystalline Solar Panels</li>
+            <li><i class="fa-solid fa-check"></i> 10kWh Lithium Battery Backup</li>
+          </ul>
+        </div>
+        <div class="project-image">
+          <img src="images/projects/real-1.jpg" alt="10KVA Off-Grid Solar System" onerror="this.src='images/projects/1.webp'">
+        </div>
+      </div>
+      <div class="project-item reverse reveal r-d2">
+        <div class="project-content">
+          <span class="tag">Commercial</span>
+          <h3><a href="projects.html">50 Pcs Solar Flood Lights — Rivers State</a></h3>
+          <p>Large-scale solar flood lighting installation for a commercial facility, providing 24/7 security illumination with zero grid dependency.</p>
+          <ul class="project-features">
+            <li><i class="fa-solid fa-check"></i> 50x 200W LED Solar Flood Lights</li>
+            <li><i class="fa-solid fa-check"></i> 5KVA Solar Backup System</li>
+            <li><i class="fa-solid fa-check"></i> Automated Dusk-to-Dawn Operation</li>
+          </ul>
+        </div>
+        <div class="project-image">
+          <img src="images/projects/project 1.png" alt="Solar Flood Lights Installation" onerror="this.src='images/projects/3.webp'">
+        </div>
+      </div>
+      <div class="project-item reveal r-d3">
+        <div class="project-content">
+          <span class="tag">Commercial</span>
+          <h3><a href="projects.html">10KVA Power System — Mabuchi Abuja</a></h3>
+          <p>Reliable 10KVA solar power system installation for a commercial facility in Mabuchi, Abuja — delivering consistent backup power with smart energy management.</p>
+          <ul class="project-features">
+            <li><i class="fa-solid fa-check"></i> 10KVA 48V Inverter System</li>
+            <li><i class="fa-solid fa-check"></i> 8x 400W Monocrystalline Solar Panels</li>
+            <li><i class="fa-solid fa-check"></i> 10kWh Lithium Battery Storage</li>
+          </ul>
+        </div>
+        <div class="project-image">
+          <img src="images/projects/project 2.png" alt="10KVA Power System — Mabuchi Abuja" onerror="this.src='images/projects/1.webp'">
+        </div>
+      </div>
+    </div>
+    <div class="text-center reveal" style="margin-top:40px">
+      <a href="projects.html" class="btn btn-primary">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Strip -->
+<section class="cta-strip section">
+  <div class="container">
+    <div class="cta-grid">
+      <div class="cta-content">
+        <span class="subtitle" style="color:#00b67a">Start Your Solar Journey</span>
+        <h2 class="heading-title">Power Your Home with Solar Energy Today</h2>
+        <p class="section-desc">Join hundreds of satisfied customers across Nigeria who have made the switch to clean, reliable solar energy. Get your free consultation today.</p>
+        <div style="margin-top:32px">
+          <a href="contact.html" class="btn btn-gold">Get a Free Quote <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <ul class="cta-list">
+        <li><span class="num">01</span> Designed with sustainability and Nigerian conditions at the core</li>
+        <li><span class="num">02</span> Tailored solutions to match your energy budget and consumption</li>
+        <li><span class="num">03</span> Flexible financing options and warranty-backed installations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section section-alt" id="why-us">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="subtitle">Why Choose Us</span>
+      <h2 class="heading-title">Why Tavalino Energy?</h2>
+      <p class="section-desc">We combine deep technical expertise with a customer-first approach to deliver solar solutions that truly work.</p>
+    </div>
+    <div class="choose-grid">
+      <div class="choose-cards">
+        <div class="choose-card featured reveal r-d1">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L15 9L22 9.27L17 14.14L18 21L12 17.77L6 21L7 14.14L2 9.27L9 9L12 2Z" fill="#f8c51c" stroke="#f8c51c" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>Proven Track Record</h4>
+          <p>Over 300kW installed across 59+ projects. Every installation reflects our commitment to quality and technical excellence.</p>
+        </div>
+        <div class="choose-card reveal r-d2">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#004638" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>Smart Energy Monitoring</h4>
+          <p>Real-time monitoring tools that track your solar production and consumption, maximising system performance and savings.</p>
+        </div>
+        <div class="choose-card reveal r-d3">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21V19C16 17.9391 15.5786 16.9217 14.8284 16.1716C14.0783 15.4214 13.0609 15 12 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#004638" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>Expert Engineering Team</h4>
+          <p>Cross-disciplinary professionals dedicated to safe, efficient solar projects — from site assessment to commissioning.</p>
+        </div>
+        <div class="choose-card reveal r-d4">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#004638" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>Quality Assurance</h4>
+          <p>Industry-certified components, professional installation standards, and comprehensive after-sales support and maintenance.</p>
+        </div>
+      </div>
+      <div class="choose-card image-card reveal-right">
+        <div class="img-wrap">
+          <img src="images/misc/about.jpg" alt="Solar team" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&q=80'">
+          <div class="overlay">
+            <h4>Professional Service</h4>
+            <span>End-to-end solar solutions tailored to you</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="test-opt-b" id="testimonials">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="subtitle">Testimonials</span>
+      <h2 class="heading-title">What Our Clients Say</h2>
+      <p class="section-desc">Hear from homeowners and businesses who have experienced the Tavalino difference.</p>
+    </div>
+    <div class="swiper testimonial-carousel-b reveal">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testi-b-card">
+            <div class="testi-b-quote">"</div>
+            <div class="testi-b-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="testi-b-text">"Tavalino Energy transformed our home. We went from spending ₦150,000 monthly on generator fuel to near-zero electricity costs. The installation was clean, professional, and completed in just 3 days."</p>
+            <div class="testi-b-author">
+              <div class="testi-b-avatar" style="background:#00b67a">CO</div>
+              <div>
+                <div class="testi-b-name">Chidi Okonkwo</div>
+                <div class="testi-b-role">Homeowner, Port Harcourt</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testi-b-card">
+            <div class="testi-b-quote">"</div>
+            <div class="testi-b-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="testi-b-text">"We engaged Tavalino for a 15KVA commercial solar system at our office. The team handled everything — design, procurement, installation, and commissioning. Our productivity has improved dramatically with reliable power."</p>
+            <div class="testi-b-author">
+              <div class="testi-b-avatar" style="background:#3b82f6">AN</div>
+              <div>
+                <div class="testi-b-name">Amara Nwosu</div>
+                <div class="testi-b-role">Business Owner, Rivers State</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testi-b-card">
+            <div class="testi-b-quote">"</div>
+            <div class="testi-b-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="testi-b-text">"The solar mini grid Tavalino installed in our community has been life-changing. We now have 24/7 electricity for our shops, clinic, and school. Professional team from start to finish."</p>
+            <div class="testi-b-author">
+              <div class="testi-b-avatar" style="background:#8b5cf6">EO</div>
+              <div>
+                <div class="testi-b-name">Chief Emeka Obi</div>
+                <div class="testi-b-role">Community Leader, Imo State</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testi-b-card">
+            <div class="testi-b-quote">"</div>
+            <div class="testi-b-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="testi-b-text">"After three failed experiences with other solar installers, Tavalino restored our faith. Their after-sales support is unmatched — they check in regularly and respond immediately when we need assistance."</p>
+            <div class="testi-b-author">
+              <div class="testi-b-avatar" style="background:#f59e0b">FA</div>
+              <div>
+                <div class="testi-b-name">Funmi Adeyemi</div>
+                <div class="testi-b-role">Property Manager, Lagos</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="swiper-nav">
+      <button class="b-prev"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="b-next"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="subtitle">FAQs</span>
+      <h2 class="heading-title">Frequently Asked Questions</h2>
+      <p class="section-desc">Everything you need to know about going solar with Tavalino Energy.</p>
+    </div>
+    <div class="faq-wrapper reveal">
+      <div class="faq-item">
+        <div class="faq-question">
+          How much does a solar system cost in Nigeria?
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer"><p>Pricing depends on your energy needs and system size. A typical residential backup system starts at ₦1.2M, while a full off-grid solution ranges from ₦3.5M to ₦10M+. We provide a detailed, no-obligation quote after our free site assessment.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What warranty do you offer on installations?
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer"><p>We offer industry-leading warranties: 25-year performance warranty on solar panels, up to 5 years on inverters, and 1–3 years on installation workmanship depending on your package. Battery warranties vary by type and are clearly explained during consultation.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          How long does solar installation take?
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer"><p>Most residential installations are completed within 1–5 days. Commercial and industrial projects vary based on scope and complexity. We provide a clear timeline during the design phase and work to meet or exceed it.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          Do you offer maintenance after installation?
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer"><p>Yes. We offer routine maintenance contracts that include panel cleaning, battery inspection, inverter servicing, and system performance monitoring — keeping your system at peak efficiency year-round.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          What areas do you serve in Nigeria?
+          <span class="icon">+</span>
+        </div>
+        <div class="faq-answer"><p>We are based in Port Harcourt, Rivers State, and serve clients across the South-South, South-East, South-West, and Federal Capital Territory (Abuja). Call us to discuss your location and project scope.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/footer-logo.png" alt="Tavalino Energy">
+        <p>Tavalino Energy delivers premium solar installation, power backup, and electrical engineering solutions across Nigeria. Energy independence, professionally engineered.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact-grid">
+        <div class="footer-contact-block">
+          <h5>Port Harcourt Office</h5>
+          <p>Suite 311 Ohahuru Plaza,<br>44 Oroazi Ebony Road,<br>Rumueme, Port Harcourt</p>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Abuja Office</h5>
+          <p>1 Taraba Crescent, Maitama,<br>Off Limpopo Street, Maitama,<br>FCT, Abuja, Nigeria</p>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Email Us</h5>
+          <a href="mailto:info@tavalinoenergy.com"><i class="fa-solid fa-envelope icon"></i>info@tavalinoenergy.com</a>
+          <a href="mailto:tavalino.grl@gmail.com"><i class="fa-solid fa-envelope icon"></i>tavalino.grl@gmail.com</a>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Call Us</h5>
+          <a href="tel:+2348033119180"><i class="fa-solid fa-phone icon"></i>+234 803 311 9180</a>
+          <a href="tel:+2349074685070"><i class="fa-solid fa-phone icon"></i>+234 907 468 5070</a>
+          <a href="tel:+2348173119180"><i class="fa-solid fa-phone icon"></i>+234 817 311 9180</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Tavalino Energy Services. All rights reserved | Designed by <a href="http://www.zobrex.ng" target="_blank">Zobrex</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/2348033119180" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+// Preloader
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  setTimeout(() => preloader.classList.add('hidden'), 400);
+});
+
+// Sticky header
+const header = document.getElementById('header');
+const headerLogo = document.getElementById('headerLogo');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY > 80;
+  header.classList.toggle('scrolled', scrolled);
+  headerLogo.src = 'images/footer-logo.png';
+});
+
+// Mobile menu
+const menuToggle = document.getElementById('menuToggle');
+const headerNav = document.getElementById('headerNav');
+
+menuToggle.addEventListener('click', () => {
+  headerNav.classList.toggle('open');
+  menuToggle.classList.toggle('open');
+  const icon = menuToggle.querySelector('i');
+  if (headerNav.classList.contains('open')) {
+    icon.className = 'fa-solid fa-xmark';
+  } else {
+    icon.className = 'fa-solid fa-bars';
+  }
+});
+
+headerNav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    headerNav.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+  });
+});
+
+// Counter animation
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    counter.textContent = '0';
+    const target = parseInt(counter.getAttribute('data-target'));
+    const duration = 2000;
+    const start = performance.now();
+
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * target);
+      counter.textContent = current;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+revealEls.forEach(el => revealObserver.observe(el));
+
+// Counter observer - animate when counters come into view
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+const aboutCounters = document.querySelector('.about-counters');
+if (aboutCounters) counterObserver.observe(aboutCounters);
+
+// FAQ accordion
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    const item = q.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(open => open.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+// Init testimonial carousels
+document.addEventListener('DOMContentLoaded', function () {
+  // Option B - main carousel
+  const bSwiper = new Swiper('.testimonial-carousel-b', {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: { delay: 5000, disableOnInteraction: false },
+    pagination: { el: '.swiper-pagination', clickable: true }
+  });
+
+  document.querySelector('.b-next')?.addEventListener('click', () => bSwiper.slideNext());
+  document.querySelector('.b-prev')?.addEventListener('click', () => bSwiper.slidePrev());
+});
+</script>
+
+</body>
+</html>

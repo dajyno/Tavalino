@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us — Tavalino Energy</title>
+<meta name="description" content="Get in touch with Tavalino Energy. Contact our Port Harcourt or Abuja office for solar installation, power backup, and renewable energy solutions.">
+<link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Satoshi','Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#f4f7f6;color:#1a2e2a;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden
+}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:100px 0}
+h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#0a1a1f}
+
+.subtitle{
+  display:inline-block;font-size:12px;font-weight:600;
+  text-transform:uppercase;letter-spacing:2.5px;
+  color:#00b67a;margin-bottom:12px
+}
+.heading-title{font-size:clamp(30px,3.5vw,48px);margin-bottom:16px}
+.section-desc{font-size:16px;max-width:600px;color:#5a7a72;line-height:1.7;margin-bottom:0}
+.text-center{text-align:center}
+.text-center .section-desc{margin:0 auto}
+.section-header{margin-bottom:56px}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Space Grotesk','Inter',sans-serif;font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.5px;
+  padding:16px 34px;border-radius:8px;
+  cursor:pointer;border:none;text-decoration:none;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1);
+  position:relative;overflow:hidden
+}
+.btn-primary{background:#004638;color:#fff}
+.btn-primary:hover{background:#005c48;transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,70,56,0.3)}
+.btn-gold{background:#f8c51c;color:#0a1a1f}
+.btn-gold:hover{background:#e0b010;transform:translateY(-3px);box-shadow:0 12px 32px rgba(248,197,28,0.35)}
+
+/* Preloader */
+.preloader{
+  position:fixed;inset:0;z-index:99999;
+  background:#0a1a1f;display:flex;
+  align-items:center;justify-content:center;
+  transition:opacity 0.6s ease,visibility 0.6s ease
+}
+.preloader.hidden{opacity:0;visibility:hidden}
+.preloader-spinner{
+  width:48px;height:48px;
+  border:3px solid rgba(0,182,122,0.15);
+  border-top-color:#00b67a;border-radius:50%;
+  animation:spin 0.8s linear infinite
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.preloader-label{
+  position:absolute;margin-top:80px;
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:13px;font-weight:600;letter-spacing:3px;
+  color:#00b67a;text-transform:uppercase
+}
+
+/* Top Bar */
+.top-bar{
+  background:#0a1a1f;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)
+}
+.top-bar .container{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px
+}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.top-bar-item{
+  display:flex;align-items:center;gap:7px;
+  font-size:12px;color:#8aa39b;transition:color 0.2s
+}
+.top-bar-item i{font-size:12px;color:#00b67a;width:14px}
+.top-bar-item:hover{color:#e0ece7}
+.top-bar-social{display:flex;gap:10px}
+.top-bar-social a{
+  width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+  border-radius:6px;color:#6a8e84;font-size:12px;
+  transition:all 0.25s ease;background:rgba(255,255,255,0.03)
+}
+.top-bar-social a:hover{background:#00b67a;color:#fff;transform:translateY(-2px)}
+
+/* Header */
+.header{
+  position:sticky;top:0;width:100%;z-index:1000;
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  background:#fff;border-bottom:1px solid rgba(0,0,0,0.05)
+}
+.header.scrolled{
+  background:rgba(0,70,56,0.92);
+  backdrop-filter:blur(24px) saturate(1.3);-webkit-backdrop-filter:blur(24px) saturate(1.3);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 4px 30px rgba(0,0,0,0.12)
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;gap:24px
+}
+.header-logo{display:flex;align-items:center;gap:10px}
+.header-logo img{height:44px;transition:all 0.3s ease}
+.header-logo span{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-weight:900;font-size:18px;letter-spacing:2px;
+  color:#fff;transition:color 0.2s
+}
+.header-logo span em{font-style:normal;color:#00b67a}
+.header-nav{display:flex;align-items:center;gap:8px}
+.header-nav a{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:13px;font-weight:500;letter-spacing:0.3px;
+  color:#3a5a52;padding:8px 16px;border-radius:6px;
+  transition:all 0.25s ease;position:relative
+}
+.header-nav a:hover,.header-nav a.active{color:#004638;background:rgba(0,70,56,0.06)}
+.header.scrolled .header-nav a{color:#b0c8c0}
+.header.scrolled .header-nav a:hover,.header.scrolled .header-nav a.active{color:#fff;background:rgba(255,255,255,0.05)}
+.header-nav .nav-cta{
+  background:#004638;color:#fff;font-weight:700;padding:10px 24px;
+  border-radius:6px;margin-left:8px
+}
+.header-nav .nav-cta:hover{background:#005c48;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,70,56,0.3)}
+.menu-toggle{display:none;background:none;border:none;font-size:22px;color:#0a1a1f;cursor:pointer;padding:8px;border-radius:6px;transition:background 0.2s}
+.menu-toggle:hover{background:rgba(0,0,0,0.04)}
+.header.scrolled .menu-toggle{color:#fff}
+.header.scrolled .menu-toggle:hover{background:rgba(255,255,255,0.06)}
+
+/* Page Hero */
+.page-hero{
+  position:relative;min-height:480px;display:flex;align-items:center;
+  background:linear-gradient(135deg,#0a1a1f 0%,#0d2a2a 50%,#004638 100%);
+  overflow:hidden;margin-top:-1px
+}
+.page-hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('images/projects/real-2.jpg');
+  background-size:cover;background-position:center;
+  opacity:0.15;mix-blend-mode:overlay
+}
+.page-hero::after{
+  content:'';position:absolute;top:-30%;right:-15%;width:500px;height:500px;
+  border-radius:50%;background:radial-gradient(circle,rgba(0,182,122,0.08),transparent 70%)
+}
+.page-hero .container{position:relative;z-index:2;width:100%;padding:140px 24px 60px}
+.page-hero .page-tag{
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;
+  color:#00b67a;margin-bottom:12px;font-family:'Space Grotesk','Inter',sans-serif
+}
+.page-hero h1{
+  font-size:clamp(34px,4.5vw,56px);color:#fff;margin-bottom:14px;max-width:700px
+}
+.page-hero p{
+  font-size:16px;color:#8aa39b;line-height:1.8;max-width:560px
+}
+
+/* Contact Section */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+
+/* Form */
+.contact-form{background:#fff;border:1px solid #e0ece7;border-radius:14px;padding:40px 36px}
+.contact-form h3{font-size:22px;margin-bottom:24px}
+.form-group{margin-bottom:20px}
+.form-group label{
+  display:block;font-size:13px;font-weight:600;color:#0a1a1f;
+  margin-bottom:6px;font-family:'Space Grotesk','Inter',sans-serif
+}
+.form-group input,.form-group textarea{
+  width:100%;padding:14px 16px;border:1px solid #e0ece7;border-radius:8px;
+  font-family:'Satoshi','Inter',sans-serif;font-size:14px;color:#1a2e2a;
+  background:#fafcfb;transition:border-color 0.25s ease;outline:none
+}
+.form-group input:focus,.form-group textarea:focus{border-color:#00b67a;background:#fff}
+.form-group textarea{height:130px;resize:vertical}
+.form-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Space Grotesk','Inter',sans-serif;font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.5px;
+  padding:16px 34px;border-radius:8px;cursor:pointer;border:none;
+  background:#004638;color:#fff;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1)
+}
+.form-btn:hover{background:#005c48;transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,70,56,0.3)}
+
+/* Info */
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-card{
+  background:#fff;border:1px solid #e0ece7;border-radius:14px;
+  padding:28px 24px;transition:all 0.35s ease
+}
+.contact-card:hover{border-color:#bdd6ce;box-shadow:0 8px 24px rgba(0,70,56,0.04)}
+.contact-card .cc-icon{
+  width:44px;height:44px;display:flex;align-items:center;justify-content:center;
+  background:#edf3f0;border-radius:10px;font-size:18px;color:#004638;margin-bottom:14px
+}
+.contact-card h5{font-size:15px;margin-bottom:6px}
+.contact-card p{font-size:14px;color:#5a7a72;line-height:1.7;margin:0}
+.contact-card a{font-size:14px;color:#5a7a72;display:block;line-height:1.7;transition:color 0.2s}
+.contact-card a:hover{color:#00b67a}
+.contact-card .map-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:700;color:#00b67a;margin-top:8px;
+  transition:gap 0.25s ease
+}
+.contact-card .map-link:hover{gap:10px;color:#004638}
+
+/* Split card layout */
+.card-split{display:flex;gap:0}
+.card-split-item{flex:1;padding:0 16px}
+.card-split-item:first-child{border-right:1px solid #e0ece7;padding-left:0}
+.card-split-item:last-child{padding-right:0}
+.card-split-item strong{
+  display:block;font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:13px;font-weight:700;color:#0a1a1f;margin-bottom:6px;
+  text-transform:uppercase;letter-spacing:0.5px
+}
+
+/* Map Section */
+.map-section{background:#fff;padding:80px 0;border-top:1px solid #e0ece7}
+.map-tabs{display:flex;gap:8px;justify-content:center;margin-bottom:24px}
+.map-tab{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:13px;font-weight:600;letter-spacing:0.3px;
+  padding:10px 24px;border-radius:8px;cursor:pointer;
+  border:1px solid #e0ece7;background:#fff;color:#5a7a72;
+  transition:all 0.3s ease
+}
+.map-tab:hover{border-color:#00b67a;color:#004638}
+.map-tab.active{background:#004638;border-color:#004638;color:#fff}
+.map-wrap{border-radius:14px;overflow:hidden;border:1px solid #e0ece7;position:relative}
+.map-wrap iframe{width:100%;height:420px;display:block}
+.map-frame{display:none}
+.map-frame.active{display:block}
+
+/* CTA Section */
+.cta-section{
+  background:#004638;margin-top:25px;position:relative;z-index:1;padding:0
+}
+.cta-wrapper{
+  display:flex;align-items:center;justify-content:space-between;gap:48px
+}
+.cta-wrapper .cta-image{
+  margin-top:-25px;flex-shrink:0;position:relative;z-index:2
+}
+.cta-wrapper .cta-image img{
+  display:block;max-height:240px;width:auto;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.15))
+}
+.cta-wrapper h3{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:clamp(28px,3vw,40px);font-weight:800;color:#fff;
+  line-height:1.2;letter-spacing:-0.02em;max-width:500px
+}
+.cta-wrapper h3 em{font-style:normal;color:#f8c51c}
+.cta-wrapper .cta-btn{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;
+  padding:16px 34px;border-radius:8px;cursor:pointer;border:none;text-decoration:none;
+  background:#f8c51c;color:#0a1a1f;flex-shrink:0;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1)
+}
+.cta-wrapper .cta-btn:hover{
+  background:#e0b010;transform:translateY(-3px);
+  box-shadow:0 12px 32px rgba(0,0,0,0.2)
+}
+.cta-wrapper .cta-btn i{
+  font-size:14px;transition:transform 0.25s ease
+}
+.cta-wrapper .cta-btn:hover i{transform:translate(3px,-3px)}
+
+/* Footer */
+.footer{padding:80px 0 0;background:#0a1a1f}
+.footer-grid{display:grid;grid-template-columns:2fr 3fr;gap:48px}
+.footer-brand img{height:40px;margin-bottom:16px}
+.footer-brand p{font-size:14px;color:#6a8e84;line-height:1.7;margin-bottom:20px;max-width:340px}
+.footer-social{display:flex;gap:8px}
+.footer-social a{
+  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,0.08);border-radius:8px;
+  color:#6a8e84;font-size:13px;transition:all 0.25s ease
+}
+.footer-social a:hover{border-color:#00b67a;color:#fff;background:rgba(0,182,122,0.1);transform:translateY(-3px)}
+.footer-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-content:start}
+.footer-contact-block h5{
+  font-family:'Space Grotesk','Inter',sans-serif;font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;color:#e0ece7;margin-bottom:16px
+}
+.footer-contact-block p{font-size:13px;color:#6a8e84;line-height:1.8;margin:0}
+.footer-contact-block a{font-size:13px;color:#6a8e84;display:block;line-height:1.8;transition:color 0.2s}
+.footer-contact-block a:hover{color:#00b67a}
+.footer-contact-block .icon{color:#00b67a;margin-right:8px;width:16px;display:inline-block}
+.footer-bottom{
+  margin-top:56px;padding:24px 0;
+  border-top:1px solid rgba(255,255,255,0.04);
+  text-align:center
+}
+.footer-bottom p{font-size:12px;color:#4a6e64;margin:0}
+.footer-bottom a{color:#00b67a;font-weight:700;transition:color 0.2s}
+.footer-bottom a:hover{color:#f8c51c}
+
+/* WhatsApp Float */
+.wa-float{
+  position:fixed;bottom:28px;right:28px;z-index:9999;
+  width:54px;height:54px;
+  background:#00b67a;color:#fff;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:26px;text-decoration:none;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1);
+  box-shadow:0 6px 24px rgba(0,182,122,0.3)
+}
+.wa-float:hover{background:#009e6a;transform:translateY(-4px) scale(1.05);box-shadow:0 12px 40px rgba(0,182,122,0.4);color:#fff}
+
+/* Toast */
+.toast{
+  position:fixed;top:24px;right:24px;z-index:99999;
+  display:flex;align-items:center;gap:12px;
+  padding:16px 24px;border-radius:10px;
+  font-family:'Satoshi','Inter',sans-serif;font-size:14px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.12);
+  transform:translateX(120%);opacity:0;
+  transition:all 0.5s cubic-bezier(0.16,1,0.3,1);
+  max-width:400px
+}
+.toast.show{transform:translateX(0);opacity:1}
+.toast-success{background:#004638;color:#fff}
+.toast-error{background:#b91c1c;color:#fff}
+.toast i{font-size:18px;flex-shrink:0}
+
+/* Scroll Reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.r-d1{transition-delay:0.08s}
+.r-d2{transition-delay:0.16s}
+.r-d3{transition-delay:0.24s}
+.r-d4{transition-delay:0.32s}
+
+/* Responsive */
+@media(max-width:1024px){
+  .contact-grid{grid-template-columns:1fr;gap:32px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .page-hero{min-height:320px}
+  .page-hero .container{padding:120px 24px 50px}
+}
+@media(max-width:768px){
+  .section{padding:72px 0}
+  .page-hero{min-height:280px}
+  .page-hero .container{padding:100px 24px 40px}
+  .contact-form{padding:28px 20px}
+  .card-split{flex-direction:column}
+  .card-split-item:first-child{border-right:none;border-bottom:1px solid #e0ece7;padding:0 0 16px 0;margin-bottom:16px}
+  .card-split-item:last-child{padding:0}
+  .cta-wrapper{flex-wrap:wrap;justify-content:center;text-align:center;padding:60px 0}
+  .cta-wrapper .cta-image{display:none}
+  .cta-wrapper h3{text-align:center}
+  .cta-wrapper .cta-btn{justify-content:center}
+  .header-nav{
+    position:fixed;top:0;right:-100%;width:300px;height:100vh;
+    background:rgba(10,26,31,0.98);backdrop-filter:blur(24px);
+    flex-direction:column;padding:80px 32px 32px;gap:4px;
+    transition:right 0.4s cubic-bezier(0.16,1,0.3,1);
+    z-index:99;border-left:1px solid rgba(255,255,255,0.04)
+  }
+  .header-nav.open{right:0}
+  .header-nav a{padding:14px 20px;font-size:15px;color:#d0e2db}
+  .header-nav a:hover,.header-nav a.active{color:#fff;background:rgba(255,255,255,0.06)}
+  .header-nav .nav-cta{margin-left:0;margin-top:8px;text-align:center}
+  .menu-toggle{display:block;z-index:100}
+  .menu-toggle.open{position:fixed;top:24px;right:24px;color:#00b67a}
+  .top-bar .container{justify-content:center}
+  .top-bar-left,.top-bar-right{justify-content:center}
+  .footer-grid{grid-template-columns:1fr;gap:40px}
+  .footer-contact-grid{grid-template-columns:1fr;gap:24px}
+  .map-wrap iframe{height:280px}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .page-hero{min-height:240px}
+  .page-hero h1{font-size:28px}
+  .contact-form{padding:24px 16px}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-spinner"></div>
+  <div class="preloader-label">Tavalino</div>
+</div>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:info@tavalinoenergy.com" class="top-bar-item">
+        <i class="fa-regular fa-envelope"></i> info@tavalinoenergy.com
+      </a>
+      <a href="tel:+2348033119180" class="top-bar-item">
+        <i class="fa-solid fa-phone"></i> +234 803 311 9180
+      </a>
+      <span class="top-bar-item">
+        <i class="fa-regular fa-clock"></i> Mon–Fri, 8:00am – 5:00pm
+      </span>
+    </div>
+    <div class="top-bar-right">
+      <div class="top-bar-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="images/footer-logo.png" alt="Tavalino Energy" id="headerLogo">
+      </a>
+      <nav class="header-nav" id="headerNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="projects.html">Projects</a>
+        <a href="news.html">News</a>
+        <a href="contact.html" class="active nav-cta">Get a Quote</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-tag">Get In Touch</div>
+    <h1>Contact Us</h1>
+    <p>Ready to go solar or have a question? Reach out to our team and we'll respond within 24 hours.</p>
+  </div>
+</section>
+
+<!-- Contact Form + Info -->
+<section class="section" id="contact-main">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-form reveal-left">
+        <h3>Send us a Message</h3>
+        <form id="contactForm" action="https://formspree.io/f/xrevbker" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" placeholder="+234 8XX XXX XXXX" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject" placeholder="e.g. Solar Installation Inquiry">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" placeholder="Tell us about your project or question..." required></textarea>
+          </div>
+          <button type="submit" class="form-btn">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+      <div class="contact-info reveal-right">
+        <div class="contact-card">
+          <div class="cc-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h5>Our Offices</h5>
+            <div class="card-split">
+            <div class="card-split-item">
+              <strong>Port Harcourt</strong>
+              <p>Suite 311 Ohahuru Plaza,<br>44 Oroazi Ebony Road,<br>Rumueme, Port Harcourt</p>
+              <a href="https://maps.google.com/?q=Ohahuru+Plaza+Port+Harcourt+Nigeria" target="_blank" rel="noopener" class="map-link">View on Google Maps <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="card-split-item">
+              <strong>Abuja</strong>
+              <p>1 Taraba Crescent, Maitama,<br>Off Limpopo Street, Maitama,<br>FCT, Abuja, Nigeria</p>
+              <a href="https://maps.google.com/?q=1+Taraba+Crescent+Maitama+Abuja+Nigeria" target="_blank" rel="noopener" class="map-link">View on Google Maps <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-card">
+          <div class="cc-icon"><i class="fa-solid fa-headset"></i></div>
+          <h5>Contact Details</h5>
+          <div class="card-split">
+            <div class="card-split-item">
+              <strong>Call Us</strong>
+              <a href="tel:+2348033119180">+234 803 311 9180</a>
+              <a href="tel:+2349074685070">+234 907 468 5070</a>
+              <a href="tel:+2348173119180">+234 817 311 9180</a>
+            </div>
+            <div class="card-split-item">
+              <strong>Email Us</strong>
+              <a href="mailto:info@tavalinoenergy.com">info@tavalinoenergy.com</a>
+              <a href="mailto:tavalino.grl@gmail.com">tavalino.grl@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<section class="map-section" id="map">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="subtitle">Our Location</span>
+      <h2 class="heading-title">Visit Our Offices</h2>
+      <p class="section-desc">Select a location below to view on the map.</p>
+    </div>
+    <div class="map-tabs reveal">
+      <div class="map-tab active" data-map="ph">Port Harcourt</div>
+      <div class="map-tab" data-map="abuja">Abuja</div>
+    </div>
+    <div class="map-wrap reveal">
+      <div class="map-frame active" id="map-ph">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.651893208431!2d6.987602514855299!3d4.829696296492897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1069ce6bf60399d1%3A0xa527fa47bdb911af!2sOhahuru+Plaza!5e0!3m2!1sen!2sng!4v1495191646102" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="map-frame" id="map-abuja">
+        <iframe src="https://maps.google.com/maps?q=1+Taraba+Crescent+Maitama+Abuja+Nigeria&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/footer-logo.png" alt="Tavalino Energy">
+        <p>Tavalino Energy delivers premium solar installation, power backup, and electrical engineering solutions across Nigeria. Energy independence, professionally engineered.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact-grid">
+        <div class="footer-contact-block">
+          <h5>Port Harcourt Office</h5>
+          <p>Suite 311 Ohahuru Plaza,<br>44 Oroazi Ebony Road,<br>Rumueme, Port Harcourt</p>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Abuja Office</h5>
+          <p>1 Taraba Crescent, Maitama,<br>Off Limpopo Street, Maitama,<br>FCT, Abuja, Nigeria</p>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Email Us</h5>
+          <a href="mailto:info@tavalinoenergy.com"><i class="fa-solid fa-envelope icon"></i>info@tavalinoenergy.com</a>
+          <a href="mailto:tavalino.grl@gmail.com"><i class="fa-solid fa-envelope icon"></i>tavalino.grl@gmail.com</a>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Call Us</h5>
+          <a href="tel:+2348033119180"><i class="fa-solid fa-phone icon"></i>+234 803 311 9180</a>
+          <a href="tel:+2349074685070"><i class="fa-solid fa-phone icon"></i>+234 907 468 5070</a>
+          <a href="tel:+2348173119180"><i class="fa-solid fa-phone icon"></i>+234 817 311 9180</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Tavalino Energy Services. All rights reserved | Designed by <a href="http://www.zobrex.ng" target="_blank">Zobrex</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <i class="fa-solid fa-circle-check"></i>
+  <span id="toastMsg">Message sent successfully!</span>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/2348033119180" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+// Preloader
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  setTimeout(() => preloader.classList.add('hidden'), 400);
+});
+
+// Sticky header
+const header = document.getElementById('header');
+const headerLogo = document.getElementById('headerLogo');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY > 80;
+  header.classList.toggle('scrolled', scrolled);
+  headerLogo.src = 'images/footer-logo.png';
+});
+
+// Mobile menu
+const menuToggle = document.getElementById('menuToggle');
+const headerNav = document.getElementById('headerNav');
+
+menuToggle.addEventListener('click', () => {
+  headerNav.classList.toggle('open');
+  menuToggle.classList.toggle('open');
+  const icon = menuToggle.querySelector('i');
+  if (headerNav.classList.contains('open')) {
+    icon.className = 'fa-solid fa-xmark';
+  } else {
+    icon.className = 'fa-solid fa-bars';
+  }
+});
+
+headerNav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    headerNav.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+  });
+});
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+revealEls.forEach(el => revealObserver.observe(el));
+
+// Toast
+function showToast(msg, type) {
+  const toast = document.getElementById('toast');
+  const icon = toast.querySelector('i');
+  const msgEl = document.getElementById('toastMsg');
+  toast.className = 'toast toast-' + type;
+  icon.className = 'fa-solid ' + (type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation');
+  msgEl.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 4500);
+}
+
+// AJAX form submit
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.form-btn');
+  const orig = btn.innerHTML;
+  btn.disabled = true;
+  btn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+  try {
+    const res = await fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      showToast('Message sent successfully! We\'ll get back to you within 24 hours.', 'success');
+      this.reset();
+    } else {
+      showToast('Something went wrong. Please try again.', 'error');
+    }
+  } catch {
+    showToast('Network error. Please check your connection.', 'error');
+  }
+  btn.disabled = false;
+  btn.innerHTML = orig;
+});
+
+// Map tabs
+document.querySelectorAll('.map-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.map-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.map-frame').forEach(f => f.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('map-' + tab.dataset.map).classList.add('active');
+  });
+});
+</script>
+</body>
+</html>

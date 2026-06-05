@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Tavalino Energy</title>
+<meta name="description" content="Learn about Tavalino Energy — your trusted partner in solar installation, renewable energy, and electrical engineering across Nigeria.">
+<link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Satoshi','Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:#f4f7f6;color:#1a2e2a;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden
+}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+.section{padding:100px 0}
+.section-alt{background:#edf3f0}
+.section-dark{background:#0a1a1f;color:#c8d6d1}
+.section-dark .subtitle{color:#00b67a}
+.section-dark .heading-title{color:#fff}
+.section-dark .section-desc{color:#8aa39b}
+
+/* Typography */
+h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#0a1a1f}
+.subtitle{
+  display:inline-block;font-size:12px;font-weight:600;
+  text-transform:uppercase;letter-spacing:2.5px;
+  color:#00b67a;margin-bottom:12px
+}
+.heading-title{font-size:clamp(30px,3.5vw,48px);margin-bottom:16px}
+.section-desc{font-size:16px;max-width:600px;color:#5a7a72;line-height:1.7;margin-bottom:0}
+.text-center{text-align:center}
+.text-center .section-desc{margin:0 auto}
+.section-header{margin-bottom:56px}
+
+/* Buttons */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Space Grotesk','Inter',sans-serif;font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.5px;
+  padding:16px 34px;border-radius:8px;
+  cursor:pointer;border:none;text-decoration:none;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1);
+  position:relative;overflow:hidden
+}
+.btn-primary{background:#004638;color:#fff}
+.btn-primary:hover{background:#005c48;transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,70,56,0.3)}
+.btn-secondary{background:#00b67a;color:#fff}
+.btn-secondary:hover{background:#009e6a;transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,182,122,0.3)}
+.btn-outline{background:transparent;color:#004638;border:2px solid #004638}
+.btn-outline:hover{background:#004638;color:#fff;transform:translateY(-3px)}
+.btn-light{background:#fff;color:#004638}
+.btn-light:hover{background:#f4f7f6;transform:translateY(-3px);box-shadow:0 12px 32px rgba(255,255,255,0.2)}
+.btn-gold{background:#f8c51c;color:#0a1a1f}
+.btn-gold:hover{background:#e0b010;transform:translateY(-3px);box-shadow:0 12px 32px rgba(248,197,28,0.35)}
+
+/* Preloader */
+.preloader{
+  position:fixed;inset:0;z-index:99999;
+  background:#0a1a1f;display:flex;
+  align-items:center;justify-content:center;
+  transition:opacity 0.6s ease,visibility 0.6s ease
+}
+.preloader.hidden{opacity:0;visibility:hidden}
+.preloader-spinner{
+  width:48px;height:48px;
+  border:3px solid rgba(0,182,122,0.15);
+  border-top-color:#00b67a;border-radius:50%;
+  animation:spin 0.8s linear infinite
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.preloader-label{
+  position:absolute;margin-top:80px;
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:13px;font-weight:600;letter-spacing:3px;
+  color:#00b67a;text-transform:uppercase
+}
+
+/* Top Bar */
+.top-bar{
+  background:#0a1a1f;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.04)
+}
+.top-bar .container{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px
+}
+.top-bar-left,.top-bar-right{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.top-bar-item{
+  display:flex;align-items:center;gap:7px;
+  font-size:12px;color:#8aa39b;transition:color 0.2s
+}
+.top-bar-item i{font-size:12px;color:#00b67a;width:14px}
+.top-bar-item:hover{color:#e0ece7}
+.top-bar-social{display:flex;gap:10px}
+.top-bar-social a{
+  width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+  border-radius:6px;color:#6a8e84;font-size:12px;
+  transition:all 0.25s ease;background:rgba(255,255,255,0.03)
+}
+.top-bar-social a:hover{background:#00b67a;color:#fff;transform:translateY(-2px)}
+
+/* Header */
+.header{
+  position:sticky;top:0;width:100%;z-index:1000;
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
+  background:#fff;border-bottom:1px solid rgba(0,0,0,0.05)
+}
+.header.scrolled{
+  background:rgba(0,70,56,0.92);
+  backdrop-filter:blur(24px) saturate(1.3);-webkit-backdrop-filter:blur(24px) saturate(1.3);
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  box-shadow:0 4px 30px rgba(0,0,0,0.12)
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 0;gap:24px
+}
+.header-logo{display:flex;align-items:center;gap:10px}
+.header-logo img{height:44px;transition:all 0.3s ease}
+.header-logo span{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-weight:900;font-size:18px;letter-spacing:2px;
+  color:#fff;transition:color 0.2s
+}
+.header-logo span em{font-style:normal;color:#00b67a}
+.header-nav{display:flex;align-items:center;gap:8px}
+.header-nav a{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:13px;font-weight:500;letter-spacing:0.3px;
+  color:#3a5a52;padding:8px 16px;border-radius:6px;
+  transition:all 0.25s ease;position:relative
+}
+.header-nav a:hover,.header-nav a.active{color:#004638;background:rgba(0,70,56,0.06)}
+.header.scrolled .header-nav a{color:#b0c8c0}
+.header.scrolled .header-nav a:hover,.header.scrolled .header-nav a.active{color:#fff;background:rgba(255,255,255,0.05)}
+.header-nav .nav-cta{
+  background:#004638;color:#fff;font-weight:700;padding:10px 24px;
+  border-radius:6px;margin-left:8px
+}
+.header-nav .nav-cta:hover{background:#005c48;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,70,56,0.3)}
+.menu-toggle{display:none;background:none;border:none;font-size:22px;color:#0a1a1f;cursor:pointer;padding:8px;border-radius:6px;transition:background 0.2s}
+.menu-toggle:hover{background:rgba(0,0,0,0.04)}
+.header.scrolled .menu-toggle{color:#fff}
+.header.scrolled .menu-toggle:hover{background:rgba(255,255,255,0.06)}
+
+/* Page Hero / Breadcrumb banner */
+.page-hero{
+  position:relative;min-height:480px;display:flex;align-items:center;
+  background:linear-gradient(135deg,#0a1a1f 0%,#0d2a2a 50%,#004638 100%);
+  overflow:hidden;margin-top:-1px
+}
+.page-hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:url('images/projects/real-2.jpg');
+  background-size:cover;background-position:center;
+  opacity:0.15;mix-blend-mode:overlay
+}
+.page-hero::after{
+  content:'';position:absolute;top:-30%;right:-15%;width:500px;height:500px;
+  border-radius:50%;background:radial-gradient(circle,rgba(0,182,122,0.08),transparent 70%)
+}
+.page-hero .container{position:relative;z-index:2;width:100%;padding:140px 24px 60px}
+.page-hero .page-tag{
+  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;
+  color:#00b67a;margin-bottom:12px;font-family:'Space Grotesk','Inter',sans-serif
+}
+.page-hero h1{
+  font-size:clamp(34px,4.5vw,56px);color:#fff;margin-bottom:14px;max-width:700px
+}
+.page-hero p{
+  font-size:16px;color:#8aa39b;line-height:1.8;max-width:560px
+}
+
+/* About Story */
+.story-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.story-image{
+  border-radius:16px;overflow:hidden;position:relative;
+  box-shadow:0 24px 64px rgba(0,70,56,0.1)
+}
+.story-image img{width:100%;height:520px;object-fit:cover;object-position:top;transition:transform 0.6s cubic-bezier(0.16,1,0.3,1)}
+.story-image:hover img{transform:scale(1.06)}
+.story-content .heading-title{font-size:clamp(28px,2.8vw,40px)}
+.story-content p{
+  font-size:15px;color:#5a7a72;line-height:1.8;margin-bottom:20px
+}
+.story-content p:last-of-type{margin-bottom:0}
+
+/* Sign-off / CEO block */
+.signoff-text{margin-top:28px;padding-top:20px;border-top:2px solid #e0ece7}
+.signoff-text .name{font-size:24px;font-weight:800;color:#0a1a1f}
+.signoff-text .role{font-size:15px;color:#5a7a72;margin-top:4px}
+
+/* Stats section */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.stat-card{
+  background:#fff;border:1px solid #e0ece7;border-radius:14px;
+  padding:36px 24px;text-align:center;transition:all 0.4s cubic-bezier(0.16,1,0.3,1)
+}
+.stat-card:hover{transform:translateY(-8px);box-shadow:0 16px 40px rgba(0,70,56,0.06);border-color:#bdd6ce}
+.stat-icon{
+  width:56px;height:56px;display:flex;align-items:center;justify-content:center;
+  background:#edf3f0;border-radius:14px;margin:0 auto 16px;
+  font-size:24px;color:#004638;transition:all 0.35s ease
+}
+.stat-card:hover .stat-icon{background:#004638;color:#fff;transform:scale(1.05)}
+.stat-num{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:34px;font-weight:900;color:#0a1a1f;line-height:1;margin-bottom:4px
+}
+.stat-num small{font-size:16px;font-weight:600;color:#00b67a}
+.stat-label{font-size:13px;color:#5a7a72;font-weight:500}
+
+/* Mission · Vision · Development */
+.mv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.mv-card{
+  background:#fff;border:1px solid #e0ece7;border-radius:14px;
+  padding:40px 28px;text-align:center;
+  transition:all 0.4s cubic-bezier(0.16,1,0.3,1)
+}
+.mv-card:hover{transform:translateY(-8px);box-shadow:0 16px 40px rgba(0,70,56,0.06);border-color:#bdd6ce}
+.mv-icon{
+  width:60px;height:60px;display:flex;align-items:center;justify-content:center;
+  background:#edf3f0;border-radius:16px;margin:0 auto 20px;
+  font-size:26px;color:#004638;transition:all 0.35s ease
+}
+.mv-card:hover .mv-icon{background:#004638;color:#fff;transform:scale(1.05) rotate(-4deg)}
+.mv-card h4{
+  font-size:20px;margin-bottom:12px;color:#0a1a1f
+}
+.mv-card p{
+  font-size:14px;color:#5a7a72;line-height:1.8
+}
+
+/* CTA Section (Rebrand-inspired) */
+.cta-section{
+  background:#004638;margin-top:25px;position:relative;z-index:1;padding:0
+}
+.cta-wrapper{
+  display:flex;align-items:center;justify-content:space-between;gap:48px
+}
+.cta-wrapper .cta-image{
+  margin-top:-25px;flex-shrink:0;position:relative;z-index:2
+}
+.cta-wrapper .cta-image img{
+  display:block;max-height:240px;width:auto;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.15))
+}
+.cta-wrapper h3{
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:clamp(28px,3vw,40px);font-weight:800;color:#fff;
+  line-height:1.2;letter-spacing:-0.02em;max-width:500px
+}
+.cta-wrapper h3 em{font-style:normal;color:#f8c51c}
+.cta-wrapper .cta-btn{
+  display:inline-flex;align-items:center;gap:12px;
+  font-family:'Space Grotesk','Inter',sans-serif;
+  font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;
+  padding:16px 34px;border-radius:8px;cursor:pointer;border:none;text-decoration:none;
+  background:#f8c51c;color:#0a1a1f;flex-shrink:0;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1)
+}
+.cta-wrapper .cta-btn:hover{
+  background:#e0b010;transform:translateY(-3px);
+  box-shadow:0 12px 32px rgba(0,0,0,0.2)
+}
+.cta-wrapper .cta-btn i{
+  font-size:14px;transition:transform 0.25s ease
+}
+.cta-wrapper .cta-btn:hover i{transform:translate(3px,-3px)}
+
+/* Footer */
+.footer{padding:80px 0 0;background:#0a1a1f}
+.footer-grid{display:grid;grid-template-columns:2fr 3fr;gap:48px}
+.footer-brand img{height:40px;margin-bottom:16px}
+.footer-brand p{font-size:14px;color:#6a8e84;line-height:1.7;margin-bottom:20px;max-width:340px}
+.footer-social{display:flex;gap:8px}
+.footer-social a{
+  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(255,255,255,0.08);border-radius:8px;
+  color:#6a8e84;font-size:13px;transition:all 0.25s ease
+}
+.footer-social a:hover{border-color:#00b67a;color:#fff;background:rgba(0,182,122,0.1);transform:translateY(-3px)}
+.footer-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-content:start}
+.footer-contact-block h5{
+  font-family:'Space Grotesk','Inter',sans-serif;font-size:13px;font-weight:700;
+  text-transform:uppercase;letter-spacing:1.5px;color:#e0ece7;margin-bottom:16px
+}
+.footer-contact-block p{font-size:13px;color:#6a8e84;line-height:1.8;margin:0}
+.footer-contact-block a{font-size:13px;color:#6a8e84;display:block;line-height:1.8;transition:color 0.2s}
+.footer-contact-block a:hover{color:#00b67a}
+.footer-contact-block .icon{color:#00b67a;margin-right:8px;width:16px;display:inline-block}
+.footer-bottom{
+  margin-top:56px;padding:24px 0;
+  border-top:1px solid rgba(255,255,255,0.04);
+  text-align:center
+}
+.footer-bottom p{font-size:12px;color:#4a6e64;margin:0}
+.footer-bottom a{color:#00b67a;font-weight:700;transition:color 0.2s}
+.footer-bottom a:hover{color:#f8c51c}
+
+/* WhatsApp Float */
+.wa-float{
+  position:fixed;bottom:28px;right:28px;z-index:9999;
+  width:54px;height:54px;
+  background:#00b67a;color:#fff;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:26px;text-decoration:none;
+  transition:all 0.35s cubic-bezier(0.16,1,0.3,1);
+  box-shadow:0 6px 24px rgba(0,182,122,0.3)
+}
+.wa-float:hover{background:#009e6a;transform:translateY(-4px) scale(1.05);box-shadow:0 12px 40px rgba(0,182,122,0.4);color:#fff}
+
+/* Scroll Reveal */
+.reveal{opacity:0;transform:translateY(40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(-40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal-left.visible{opacity:1;transform:translateX(0)}
+.reveal-right{opacity:0;transform:translateX(40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
+.reveal-right.visible{opacity:1;transform:translateX(0)}
+.r-d1{transition-delay:0.08s}
+.r-d2{transition-delay:0.16s}
+.r-d3{transition-delay:0.24s}
+.r-d4{transition-delay:0.32s}
+.r-d5{transition-delay:0.4s}
+
+/* Responsive */
+@media(max-width:1024px){
+  .story-wrapper{grid-template-columns:1fr;gap:48px}
+  .story-image img{height:340px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .cta-wrapper{flex-wrap:wrap;justify-content:center;text-align:center;padding:60px 0}
+  .cta-wrapper .cta-image{display:none}
+  .cta-wrapper h3{text-align:center}
+  .cta-wrapper .cta-btn{justify-content:center}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .page-hero{min-height:320px}
+  .page-hero .container{padding:120px 24px 50px}
+}
+@media(max-width:768px){
+  .section{padding:72px 0}
+  .header-nav{
+    position:fixed;top:0;right:-100%;width:300px;height:100vh;
+    background:rgba(10,26,31,0.98);backdrop-filter:blur(24px);
+    flex-direction:column;padding:80px 32px 32px;gap:4px;
+    transition:right 0.4s cubic-bezier(0.16,1,0.3,1);
+    z-index:99;border-left:1px solid rgba(255,255,255,0.04)
+  }
+  .header-nav.open{right:0}
+  .header-nav a{padding:14px 20px;font-size:15px;color:#d0e2db}
+  .header-nav a:hover,.header-nav a.active{color:#fff;background:rgba(255,255,255,0.06)}
+  .header-nav .nav-cta{margin-left:0;margin-top:8px;text-align:center}
+  .menu-toggle{display:block;z-index:100}
+  .menu-toggle.open{position:fixed;top:24px;right:24px;color:#00b67a}
+  .top-bar .container{justify-content:center}
+  .top-bar-left,.top-bar-right{justify-content:center}
+  .footer-grid{grid-template-columns:1fr;gap:40px}
+  .footer-contact-grid{grid-template-columns:1fr;gap:24px}
+  .stats-grid{grid-template-columns:repeat(2,1fr);gap:16px}
+  .mv-grid{grid-template-columns:1fr}
+  .mv-card{padding:32px 24px}
+  .page-hero{min-height:280px}
+  .page-hero .container{padding:100px 24px 40px}
+  .signoff-text{padding-top:16px}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .stats-grid{grid-template-columns:1fr}
+  .stat-card{padding:28px 20px}
+  .mv-card{padding:28px 20px}
+  .btn{width:100%;justify-content:center}
+  .page-hero{min-height:240px}
+  .page-hero h1{font-size:28px}
+  .footer-bottom{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader" id="preloader">
+  <div class="preloader-spinner"></div>
+  <div class="preloader-label">Tavalino</div>
+</div>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <a href="mailto:info@tavalinoenergy.com" class="top-bar-item">
+        <i class="fa-regular fa-envelope"></i> info@tavalinoenergy.com
+      </a>
+      <a href="tel:+2348033119180" class="top-bar-item">
+        <i class="fa-solid fa-phone"></i> +234 803 311 9180
+      </a>
+      <span class="top-bar-item">
+        <i class="fa-regular fa-clock"></i> Mon–Fri, 8:00am – 5:00pm
+      </span>
+    </div>
+    <div class="top-bar-right">
+      <div class="top-bar-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="images/footer-logo.png" alt="Tavalino Energy" id="headerLogo">
+      </a>
+      <nav class="header-nav" id="headerNav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="projects.html">Projects</a>
+        <a href="news.html">News</a>
+        <a href="contact.html" class="nav-cta">Get a Quote</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-tag">Who We Are</div>
+    <h1>About Tavalino Energy</h1>
+    <p>Your trusted partner in solar and renewable energy solutions — delivering power, performance, and peace of mind since 2002.</p>
+  </div>
+</section>
+
+<!-- Story -->
+<section class="section" id="story">
+  <div class="container">
+    <div class="story-wrapper">
+      <div class="story-image reveal-left">
+        <img src="images/ceo.png" alt="Tavalino Energy team">
+      </div>
+      <div class="story-content">
+        <div class="reveal">
+          <span class="subtitle">Who We Are</span>
+          <h2 class="heading-title">Experienced. Reliable. Renewable.</h2>
+        </div>
+        <p class="reveal r-d1">TAVALINO ENERGY has experience in the field of electrical engineering and renewable energy solutions. Our experienced staff and cross-disciplinary fields of application make TAVALINO ENERGY the partner that gives clients all the skill and support needed to manage and complete a project.</p>
+        <p class="reveal r-d2">TAVALINO ENERGY operates a turnkey service, which includes comprehensive services such as consulting/power project, power management, feasibility study, renewable energy, plant installation, start up and commissioning, and all the necessary technical documentation. Each project follows a series of procedures that outline the responsibilities and action plan for the coordination and completion of duties related to the implementation of projects.</p>
+        <p class="reveal r-d3">Tavalino Energy has wide ranges of partners in the renewable energy world — from off grid solutions to long time power back up and battery technology.</p>
+        <div class="signoff-text reveal r-d4">
+          <div class="name">Engr Ogu Negedu</div>
+          <div class="role">CEO, Tavalino Energy</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="section section-alt" id="stats">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="subtitle">By the Numbers</span>
+      <h2 class="heading-title">Our Impact in Numbers</h2>
+      <p class="section-desc">For over two decades, Tavalino Energy has been delivering measurable results across Nigeria.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-card reveal r-d1">
+        <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+        <div class="stat-num"><span class="counter" data-target="725">0</span><small>+</small></div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+      <div class="stat-card reveal r-d2">
+        <div class="stat-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div class="stat-num"><span class="counter" data-target="45">0</span><small>%</small></div>
+        <div class="stat-label">Growth Rate</div>
+      </div>
+      <div class="stat-card reveal r-d3">
+        <div class="stat-icon"><i class="fa-solid fa-solar-panel"></i></div>
+        <div class="stat-num"><span class="counter" data-target="59">0</span><small>+</small></div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-card reveal r-d4">
+        <div class="stat-icon"><i class="fa-solid fa-briefcase"></i></div>
+        <div class="stat-num"><span class="counter" data-target="25">0</span><small>+</small></div>
+        <div class="stat-label">Team Members</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mission · Vision · Development -->
+<section class="section" id="mv">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="subtitle">Our Purpose</span>
+      <h2 class="heading-title">What Drives Us</h2>
+      <p class="section-desc">Our mission, vision, and development approach guide every project we deliver.</p>
+    </div>
+    <div class="mv-grid">
+      <div class="mv-card reveal r-d1">
+        <div class="mv-icon"><i class="fa-solid fa-bullseye"></i></div>
+        <h4>Our Mission</h4>
+        <p>To be a complete renewable energy firm that help residential and commercial customers reduce their energy consumption and reduce environmental impact through advance turn key solar energy system.</p>
+      </div>
+      <div class="mv-card reveal r-d2">
+        <div class="mv-icon"><i class="fa-solid fa-eye"></i></div>
+        <h4>Our Vision</h4>
+        <p>We help our customers realize all the benefits of renewable energy, such as solid financial returns and a positive impact on the environment, through a unique commitment to Solar, commitment to you, approach, which means our in-house installation and customer.</p>
+      </div>
+      <div class="mv-card reveal r-d3">
+        <div class="mv-icon"><i class="fa-solid fa-chart-bar"></i></div>
+        <h4>Development</h4>
+        <p>Based on our sustantial project development experience, we selectively target project development opportunities. We aim to add value through a collaborative approach with local and international developers and inverstors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section section" id="cta">
+  <div class="container">
+    <div class="cta-wrapper">
+      <div class="cta-image reveal-left">
+        <img src="images/cta-image.png" alt="Solar energy">
+      </div>
+      <h3 class="reveal">Ready to Switch to <em>Solar Energy</em>?</h3>
+      <a href="contact.html" class="cta-btn reveal r-d1">
+        Get a Free Consultation <i class="fa-solid fa-arrow-up-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/footer-logo.png" alt="Tavalino Energy">
+        <p>Tavalino Energy delivers premium solar installation, power backup, and electrical engineering solutions across Nigeria. Energy independence, professionally engineered.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact-grid">
+        <div class="footer-contact-block">
+          <h5>Port Harcourt Office</h5>
+          <p>Suite 311 Ohahuru Plaza,<br>44 Oroazi Ebony Road,<br>Rumueme, Port Harcourt</p>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Abuja Office</h5>
+          <p>1 Taraba Crescent, Maitama,<br>Off Limpopo Street, Maitama,<br>FCT, Abuja, Nigeria</p>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Email Us</h5>
+          <a href="mailto:info@tavalinoenergy.com"><i class="fa-solid fa-envelope icon"></i>info@tavalinoenergy.com</a>
+          <a href="mailto:tavalino.grl@gmail.com"><i class="fa-solid fa-envelope icon"></i>tavalino.grl@gmail.com</a>
+        </div>
+        <div class="footer-contact-block">
+          <h5>Call Us</h5>
+          <a href="tel:+2348033119180"><i class="fa-solid fa-phone icon"></i>+234 803 311 9180</a>
+          <a href="tel:+2349074685070"><i class="fa-solid fa-phone icon"></i>+234 907 468 5070</a>
+          <a href="tel:+2348173119180"><i class="fa-solid fa-phone icon"></i>+234 817 311 9180</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Tavalino Energy Services. All rights reserved | Designed by <a href="http://www.zobrex.ng" target="_blank">Zobrex</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/2348033119180" target="_blank" class="wa-float" aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<script>
+// Preloader
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  setTimeout(() => preloader.classList.add('hidden'), 400);
+});
+
+// Sticky header
+const header = document.getElementById('header');
+const headerLogo = document.getElementById('headerLogo');
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY > 80;
+  header.classList.toggle('scrolled', scrolled);
+  headerLogo.src = 'images/footer-logo.png';
+});
+
+// Mobile menu
+const menuToggle = document.getElementById('menuToggle');
+const headerNav = document.getElementById('headerNav');
+
+menuToggle.addEventListener('click', () => {
+  headerNav.classList.toggle('open');
+  menuToggle.classList.toggle('open');
+  const icon = menuToggle.querySelector('i');
+  if (headerNav.classList.contains('open')) {
+    icon.className = 'fa-solid fa-xmark';
+  } else {
+    icon.className = 'fa-solid fa-bars';
+  }
+});
+
+headerNav.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    headerNav.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+  });
+});
+
+// Counter animation
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    counter.textContent = '0';
+    const target = parseInt(counter.getAttribute('data-target'));
+    const duration = 2000;
+    const start = performance.now();
+
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(eased * target);
+      counter.textContent = current;
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+// Scroll reveal
+const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+revealEls.forEach(el => revealObserver.observe(el));
+
+// Counter observer
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+const statsGrid = document.querySelector('.stats-grid');
+if (statsGrid) counterObserver.observe(statsGrid);
+</script>
+
+</body>
+</html>
