@@ -212,47 +212,6 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
 }
 .news-card .nc-link:hover{gap:10px;color:#00b67a}
 
-/* Timeline Section (Option C) */
-.timeline-section{background:#fff;border-top:1px solid #e0ece7}
-.timeline{
-  max-width:800px;margin:0 auto;position:relative;
-  padding-left:40px
-}
-.timeline::before{
-  content:'';position:absolute;left:14px;top:0;bottom:0;
-  width:2px;background:#e0ece7
-}
-.timeline-item{
-  position:relative;padding:0 0 40px 32px
-}
-.timeline-item:last-child{padding-bottom:0}
-.timeline-item::before{
-  content:'';position:absolute;left:-32px;top:4px;
-  width:12px;height:12px;border-radius:50%;
-  background:#00b67a;border:3px solid #f4f7f6;
-  box-shadow:0 0 0 2px #00b67a;z-index:1
-}
-.timeline-item .tl-date{
-  font-size:12px;font-weight:600;color:#00b67a;
-  text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px
-}
-.timeline-item .tl-cat{
-  display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;
-  letter-spacing:1.5px;color:#6a8e84;margin-bottom:6px
-}
-.timeline-item h4{
-  font-size:18px;margin-bottom:6px;line-height:1.25
-}
-.timeline-item p{
-  font-size:14px;color:#5a7a72;line-height:1.6;margin-bottom:10px;max-width:600px
-}
-.timeline-item .tl-link{
-  font-size:13px;font-weight:700;color:#004638;
-  display:inline-flex;align-items:center;gap:6px;
-  transition:gap 0.25s ease
-}
-.timeline-item .tl-link:hover{gap:10px;color:#00b67a}
-
 /* Footer */
 .footer{padding:80px 0 0;background:#0a1a1f}
 .footer-grid{display:grid;grid-template-columns:2fr 3fr;gap:48px}
@@ -448,33 +407,6 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
           <p>World Bank-backed initiative to deploy solar home systems across off-grid communities in Nigeria.</p>
           <span class="nc-link">Read More <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Timeline Section (Option C) -->
-<section class="section timeline-section" id="timeline">
-  <div class="container">
-    <div class="section-header text-center reveal">
-      <span class="subtitle">Full Archive</span>
-      <h2>News Timeline</h2>
-      <p class="section-desc">All Tavalino Energy news and announcements, in chronological order.</p>
-    </div>
-    <div class="timeline">
-      <a href="news/partnership-chinese-firm.html" class="timeline-item reveal r-d1">
-        <div class="tl-date">April 2026</div>
-        <span class="tl-cat">Company News</span>
-        <h4>Tavalino Energy Visits Zetatech Headquarters and Manufacturing Base, to Strengthen Strategic Expansion in Africa</h4>
-        <p>Tavalino Energy delegation visited ZETATECH's headquarters in Chengdu, touring advanced energy storage facilities and signing a strategic cooperation agreement for African market expansion.</p>
-        <span class="tl-link">Read Article <i class="fa-solid fa-arrow-right"></i></span>
-      </a>
-      <a href="news/world-bank-grant.html" class="timeline-item reveal r-d2">
-        <div class="tl-date">August 2022</div>
-        <span class="tl-cat">Grant &amp; Funding</span>
-        <h4>Tavalino Energy Services Signs Grant Agreement with World Bank on Deployment of Solar Home System</h4>
-        <p>World Bank-funded programme to deploy solar home systems to off-grid households across Nigeria.</p>
-        <span class="tl-link">Read Article <i class="fa-solid fa-arrow-right"></i></span>
       </a>
     </div>
   </div>
