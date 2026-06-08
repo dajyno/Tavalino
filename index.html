@@ -332,6 +332,40 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
 }
 .project-features li i{color:#00b67a;font-size:12px;width:18px;height:18px;display:flex;align-items:center;justify-content:center;background:rgba(0,182,122,0.1);border-radius:50%}
 
+/* Featured Card */
+.featured-card{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  background:#fff;border-radius:14px;overflow:hidden;
+  border:1px solid #e0ece7;transition:all 0.4s cubic-bezier(0.16,1,0.3,1)
+}
+.featured-card:hover{box-shadow:0 20px 48px rgba(0,70,56,0.06);border-color:#bdd6ce}
+.featured-card .fc-img{overflow:hidden;min-height:320px}
+.featured-card .fc-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1)}
+.featured-card:hover .fc-img img{transform:scale(1.04)}
+.featured-card .fc-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:center}
+.featured-card .fc-meta{
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px
+}
+.featured-card .fc-cat{
+  font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;
+  color:#00b67a;background:rgba(0,182,122,0.1);padding:4px 10px;border-radius:4px
+}
+.featured-card .fc-date{
+  font-size:12px;color:#6a8e84
+}
+.featured-card .fc-body h3{
+  font-size:22px;margin-bottom:12px;line-height:1.25
+}
+.featured-card .fc-body p{
+  font-size:14px;color:#5a7a72;line-height:1.7;margin-bottom:20px
+}
+.featured-card .fc-link{
+  font-size:13px;font-weight:700;color:#004638;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:gap 0.25s ease
+}
+.featured-card .fc-link:hover{gap:12px;color:#00b67a}
+
 /* CTA Strip */
 .cta-strip{
   background:#004638;position:relative;overflow:hidden
@@ -652,6 +686,8 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
   .hero__blob-bg{width:clamp(300px,52vw,420px);height:clamp(300px,52vw,420px)}
   .hero__badge--1{top:5%;right:5%}
   .hero__badge--2{bottom:5%;left:5%}
+  .featured-card{grid-template-columns:1fr}
+  .featured-card .fc-img{min-height:240px}
 }
 @media(max-width:768px){
   .section{padding:72px 0}
@@ -697,6 +733,7 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
   .pricing-card{padding:32px 24px}
   .footer-bottom{flex-direction:column;text-align:center}
   .btn{width:100%;justify-content:center}
+  .featured-card .fc-body{padding:28px 24px}
 }
 </style>
 </head>
@@ -857,7 +894,7 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
           </div>
         </div>
         <div class="reveal r-d3" style="margin-top:28px">
-          <a href="docs/sample.pdf" class="btn btn-primary">View our Company Profile <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="docs/TAVALINO ENERGY COMPANY PROFILE.pdf" target="_blank" class="btn btn-primary">View our Company Profile <i class="fa-solid fa-arrow-right"></i></a>
         </div>
       </div>
       <div class="about-image reveal-right">
@@ -997,6 +1034,30 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
     <div class="text-center reveal" style="margin-top:40px">
       <a href="projects.html" class="btn btn-primary">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
     </div>
+  </div>
+</section>
+
+<!-- In the News -->
+<section class="section section-alt" id="featured-news">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <span class="subtitle">Media</span>
+      <h2 class="heading-title">Tavalino in the News</h2>
+    </div>
+    <a href="news/partnership-chinese-firm.html" class="featured-card reveal">
+      <div class="fc-img">
+        <img src="images/news/china feature.svg" alt="Chinese partnership">
+      </div>
+      <div class="fc-body">
+        <div class="fc-meta">
+          <span class="fc-cat">Company News</span>
+          <span class="fc-date"><i class="fa-regular fa-calendar"></i> February 2026</span>
+        </div>
+        <h3>Tavalino Energy Visits Zetatech Headquarters and Manufacturing Base, to Strengthen Strategic Expansion in Africa</h3>
+        <p>Tavalino Energy representatives visited ZETATECH's headquarters and advanced manufacturing facilities in Chengdu, touring production lines and signing a strategic cooperation agreement to accelerate expansion across Africa.</p>
+        <span class="fc-link">Read Full Article <i class="fa-solid fa-arrow-right"></i></span>
+      </div>
+    </a>
   </div>
 </section>
 
