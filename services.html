@@ -152,151 +152,10 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
 .header.scrolled .menu-toggle{color:#fff}
 .header.scrolled .menu-toggle:hover{background:rgba(255,255,255,0.06)}
 
-/* Page Hero */
-.page-hero{
-  position:relative;min-height:480px;display:flex;align-items:center;
-  background:linear-gradient(135deg,#0a1a1f 0%,#0d2a2a 50%,#004638 100%);
-  overflow:hidden;margin-top:-1px
-}
-.page-hero::before{
-  content:'';position:absolute;inset:0;
-  background-image:url('images/projects/real-2.jpg');
-  background-size:cover;background-position:center;
-  opacity:0.15;mix-blend-mode:overlay
-}
-.page-hero::after{
-  content:'';position:absolute;top:-30%;right:-15%;width:500px;height:500px;
-  border-radius:50%;background:radial-gradient(circle,rgba(0,182,122,0.08),transparent 70%)
-}
-.page-hero .container{position:relative;z-index:2;width:100%;padding:160px 24px 80px}
-.page-hero .page-tag{
-  font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:3px;
-  color:#00b67a;margin-bottom:12px;font-family:'Space Grotesk','Inter',sans-serif
-}
-.page-hero h1{
-  font-size:clamp(36px,5vw,60px);color:#fff;margin-bottom:14px;max-width:700px
-}
-.page-hero p{
-  font-size:17px;color:#8aa39b;line-height:1.8;max-width:600px
-}
+/* Nav Overlay */
+.nav-overlay{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,0.4);opacity:0;pointer-events:none;transition:opacity 0.3s ease}
+.nav-overlay.active{opacity:1;pointer-events:auto}
 
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-
-/* ---------- Option D — Taller Cards with Overlap ---------- */
-.svc-d{
-  position:relative;border-radius:14px;overflow:hidden;
-  background:#fff;transition:all 0.4s cubic-bezier(0.16,1,0.3,1)
-}
-.svc-d:hover{transform:translateY(-8px);box-shadow:0 20px 48px rgba(0,70,56,0.08)}
-.svc-d .img-wrap{overflow:hidden;position:relative;height:280px}
-.svc-d .img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s cubic-bezier(0.16,1,0.3,1)}
-.svc-d:hover .img-wrap img{transform:scale(1.08)}
-.svc-d .body-wrap{
-  position:relative;padding:28px 28px 32px;
-  margin:-80px 20px 0 20px;z-index:2;
-  background:#fff;border-radius:14px;
-  box-shadow:0 -4px 24px rgba(0,0,0,0.04)
-}
-.svc-d h4{font-size:18px;margin-bottom:12px}
-.svc-d p{font-size:15px;color:#5a7a72;line-height:1.75;margin-bottom:0}
-.svc-d .arr-btn{
-  position:absolute;top:-24px;right:20px;z-index:3;
-  width:48px;height:48px;border-radius:50%;
-  background:#004638;color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-size:16px;transition:all 0.35s ease;
-  box-shadow:0 6px 16px rgba(0,70,56,0.25)
-}
-.svc-d:hover .arr-btn{background:#00b67a;transform:rotate(45deg)}
-
-/* Steps Section */
-.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;counter-reset:step}
-.step-card{
-  background:#fff;border:1px solid #e0ece7;border-radius:16px;
-  padding:40px 32px;text-align:center;position:relative;
-  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);overflow:hidden
-}
-.step-card:hover{transform:translateY(-8px);box-shadow:0 20px 48px rgba(0,70,56,0.06);border-color:#bdd6ce}
-.step-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:4px;
-  background:linear-gradient(90deg,#004638,#00b67a);
-  transform:scaleX(0);transform-origin:left;
-  transition:transform 0.4s cubic-bezier(0.16,1,0.3,1)
-}
-.step-card:hover::before{transform:scaleX(1)}
-.step-num{
-  width:56px;height:56px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 20px;font-family:'Space Grotesk','Inter',sans-serif;
-  font-size:22px;font-weight:900;color:#fff;
-  background:linear-gradient(135deg,#004638,#00b67a);
-  transition:all 0.4s cubic-bezier(0.16,1,0.3,1);
-  box-shadow:0 6px 20px rgba(0,70,56,0.15)
-}
-.step-card:hover .step-num{transform:scale(1.12);box-shadow:0 8px 28px rgba(0,70,56,0.25)}
-.step-card h4{font-size:18px;margin-bottom:12px;transition:color 0.3s}
-.step-card:hover h4{color:#004638}
-.step-card p{font-size:14px;color:#5a7a72;line-height:1.7;margin:0}
-
-@media(max-width:768px){
-  .steps-grid{grid-template-columns:1fr;max-width:420px;margin:0 auto}
-}
-
-/* Footer */
-.footer{padding:80px 0 0;background:#0a1a1f}
-.footer-grid{display:grid;grid-template-columns:2fr 3fr;gap:48px}
-.footer-brand img{height:40px;margin-bottom:16px}
-.footer-brand p{font-size:14px;color:#6a8e84;line-height:1.7;margin-bottom:20px;max-width:340px}
-.footer-social{display:flex;gap:8px}
-.footer-social a{
-  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
-  border:1px solid rgba(255,255,255,0.08);border-radius:8px;
-  color:#6a8e84;font-size:13px;transition:all 0.25s ease
-}
-.footer-social a:hover{border-color:#00b67a;color:#fff;background:rgba(0,182,122,0.1);transform:translateY(-3px)}
-.footer-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-content:start}
-.footer-contact-block h5{
-  font-family:'Space Grotesk','Inter',sans-serif;font-size:13px;font-weight:700;
-  text-transform:uppercase;letter-spacing:1.5px;color:#e0ece7;margin-bottom:16px
-}
-.footer-contact-block p{font-size:13px;color:#6a8e84;line-height:1.8;margin:0}
-.footer-contact-block a{font-size:13px;color:#6a8e84;display:block;line-height:1.8;transition:color 0.2s}
-.footer-contact-block a:hover{color:#00b67a}
-.footer-contact-block .icon{color:#00b67a;margin-right:8px;width:16px;display:inline-block}
-.footer-bottom{
-  margin-top:56px;padding:24px 0;
-  border-top:1px solid rgba(255,255,255,0.04);
-  text-align:center
-}
-.footer-bottom p{font-size:12px;color:#4a6e64;margin:0}
-.footer-bottom a{color:#00b67a;font-weight:700;transition:color 0.2s}
-.footer-bottom a:hover{color:#f8c51c}
-
-/* WhatsApp Float */
-.wa-float{
-  position:fixed;bottom:28px;right:28px;z-index:9999;
-  width:54px;height:54px;
-  background:#00b67a;color:#fff;
-  border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-size:26px;text-decoration:none;
-  transition:all 0.35s cubic-bezier(0.16,1,0.3,1);
-  box-shadow:0 6px 24px rgba(0,182,122,0.3)
-}
-.wa-float:hover{background:#009e6a;transform:translateY(-4px) scale(1.05);box-shadow:0 12px 40px rgba(0,182,122,0.4);color:#fff}
-
-/* Scroll Reveal */
-.reveal{opacity:0;transform:translateY(40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-left{opacity:0;transform:translateX(-40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
-.reveal-left.visible{opacity:1;transform:translateX(0)}
-.reveal-right{opacity:0;transform:translateX(40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
-.reveal-right.visible{opacity:1;transform:translateX(0)}
-.r-d1{transition-delay:0.08s}
-.r-d2{transition-delay:0.16s}
-.r-d3{transition-delay:0.24s}
-.r-d4{transition-delay:0.32s}
-
-/* Responsive */
 @media(max-width:1024px){
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
@@ -306,13 +165,13 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
 @media(max-width:768px){
   .section{padding:72px 0}
   .header-nav{
-    position:fixed;top:0;right:-100%;width:300px;height:100vh;
+    position:fixed;top:0;right:0;transform:translateX(100%);width:300px;height:100vh;
     background:rgba(10,26,31,0.98);backdrop-filter:blur(24px);
     flex-direction:column;padding:80px 32px 32px;gap:4px;
-    transition:right 0.4s cubic-bezier(0.16,1,0.3,1);
+    transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);
     z-index:99;border-left:1px solid rgba(255,255,255,0.04)
   }
-  .header-nav.open{right:0}
+  .header-nav.open{transform:translateX(0)}
   .header-nav a{padding:14px 20px;font-size:15px;color:#d0e2db}
   .header-nav a:hover,.header-nav a.active{color:#fff;background:rgba(255,255,255,0.06)}
   .header-nav .nav-cta{margin-left:0;margin-top:8px;text-align:center}
@@ -430,6 +289,7 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
         <a href="news.html">News</a>
         <a href="contact.html" class="nav-cta">Get a Quote</a>
       </nav>
+      <div class="nav-overlay" id="navOverlay"></div>
       <button class="menu-toggle" id="menuToggle" aria-label="Menu">
         <i class="fa-solid fa-bars"></i>
       </button>
@@ -615,9 +475,12 @@ window.addEventListener('scroll', () => {
 });
 const menuToggle = document.getElementById('menuToggle');
 const headerNav = document.getElementById('headerNav');
+const navOverlay = document.getElementById('navOverlay');
 menuToggle.addEventListener('click', () => {
   headerNav.classList.toggle('open');
   menuToggle.classList.toggle('open');
+  navOverlay.classList.toggle('active');
+  document.body.style.overflow = headerNav.classList.contains('open') ? 'hidden' : '';
   const icon = menuToggle.querySelector('i');
   if (headerNav.classList.contains('open')) {
     icon.className = 'fa-solid fa-xmark';
@@ -629,6 +492,8 @@ headerNav.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => {
     headerNav.classList.remove('open');
     menuToggle.classList.remove('open');
+    navOverlay.classList.remove('active');
+    document.body.style.overflow = '';
     menuToggle.querySelector('i').className = 'fa-solid fa-bars';
   });
 });
