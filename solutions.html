@@ -228,6 +228,32 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
 .svc-c.reverse .body-wrap{direction:ltr}
 .svc-c.reverse .img-wrap{direction:ltr}
 
+/* Image slider */
+.slider-wrap{position:relative;overflow:hidden;height:100%;min-height:260px}
+.slider-track{display:flex;transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);height:100%}
+.slider-track img{width:100%;height:100%;object-fit:cover;flex-shrink:0;min-height:260px}
+.slider-btn{
+  position:absolute;top:50%;transform:translateY(-50%);z-index:2;
+  width:36px;height:36px;border-radius:50%;border:none;
+  background:rgba(255,255,255,0.85);color:#004638;
+  cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 2px 8px rgba(0,0,0,0.12);transition:all 0.25s ease;
+  opacity:0;pointer-events:none
+}
+.svc-c:hover .slider-btn{opacity:1;pointer-events:auto}
+.slider-btn:hover{background:#fff;transform:translateY(-50%) scale(1.08)}
+.slider-btn.prev{left:12px}
+.slider-btn.next{right:12px}
+.slider-dots{
+  position:absolute;bottom:12px;left:50%;transform:translateX(-50%);
+  display:flex;gap:6px;z-index:2
+}
+.slider-dots span{
+  width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.5);
+  cursor:pointer;transition:all 0.25s ease
+}
+.slider-dots span.active{background:#fff;transform:scale(1.2)}
+
 /* Scroll Reveal */
 .reveal{opacity:0;transform:translateY(40px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
@@ -393,7 +419,20 @@ h1,h2,h3,h4,h5{font-family:'Space Grotesk','Inter',sans-serif;font-weight:800;li
     </div>
     <div class="svc-grid">
       <div class="svc-c reveal">
-        <div class="img-wrap"><img src="images/projects/inverter-system.webp" alt="Residential Solar"></div>
+        <div class="slider-wrap">
+          <div class="slider-track">
+            <img src="images/projects/real-1.jpg" alt="Residential Solar">
+            <img src="images/projects/18.svg" alt="Residential Solar">
+            <img src="images/projects/19.svg" alt="Residential Solar">
+          </div>
+          <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="slider-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
         <div class="body-wrap">
           <span class="tag">Residential</span>
           <h4>Residential Solar Solutions</h4>
@@ -557,6 +596,24 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
 revealEls.forEach(el => revealObserver.observe(el));
+
+// Sliders
+document.querySelectorAll('.slider-wrap').forEach(wrap => {
+  const track = wrap.querySelector('.slider-track');
+  const dots = wrap.querySelectorAll('.slider-dots span');
+  const prev = wrap.querySelector('.slider-btn.prev');
+  const next = wrap.querySelector('.slider-btn.next');
+  let idx = 0;
+
+  const update = () => {
+    track.style.transform = `translateX(-${idx * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+  };
+
+  prev.addEventListener('click', () => { idx = idx > 0 ? idx - 1 : dots.length - 1; update(); });
+  next.addEventListener('click', () => { idx = idx < dots.length - 1 ? idx + 1 : 0; update(); });
+  dots.forEach((d, i) => d.addEventListener('click', () => { idx = i; update(); }));
+});
 </script>
 </body>
 </html>
